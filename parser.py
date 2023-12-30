@@ -42,11 +42,12 @@ def get_content(url):
     # for label in auto_data:
     #     print(label)
     return auto_data
-file = open('auto.txt', 'w', encoding='utf-8')
+
 for mark in list_1:
+    file = open(f'{mark}.txt', 'w', encoding='utf-8')
     auto_info_list = get_content(f'https://api.av.by/offer-types/cars/landings/{mark}')
     file.write(auto_info_list)
-file.close()
+    file.close()
 
 
 

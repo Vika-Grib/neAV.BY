@@ -1,17 +1,22 @@
 from django.shortcuts import render
-from django.contrib.auth.models import Group, User
+from django.contrib.auth.models import Group
 from rest_framework import permissions, viewsets, generics
 
-from .models import Car
-from .serializers import GroupSerializer, UserSerializer, CarDetailSerializer, CarListView
+from .models import Car, Advertisment, MyUser
+from .serializers import GroupSerializer, UserSerializer, CarDetailSerializer, CarListView, CarAdvertismentSerializer, \
+    UserCreateSerializer
 
-class UserViewSet(viewsets.ModelViewSet):
+
+class UserView(generics.ListAPIView):
     """
     API endpoint который позволяет пользователям просматривать или редактировать
     """
-    queryset = User.objects.all().order_by('-date_joined')
+    queryset = MyUser.objects.all().order_by('name')  #чтобы посмотреть наших всех юзеров
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    #permission_classes = [permissions.IsAuthenticated]
+
+class UserCreateView(generics.CreateAPIView):
+    serializer_class = UserCreateSerializer
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -36,3 +41,13 @@ class CarListView(generics.ListAPIView):
 class CarDetailView(generics.RetrieveUpdateDestroyAPIView): # RetrieveUpdateDestroyAPIView - метод позволяет редактировать, удалять и получать данные об одном объекте
     serializer_class = CarDetailSerializer # CarDetailSerializer - указываем его, потому что нужны все поля
     queryset = Car.objects.all()
+
+
+class CarAdvertisment(generics.ListAPIView):
+    serializer_class = CarAdvertismentSerializer
+    queryset = Advertisment.objects.all()
+
+
+class AdvertCreateView(generics.CreateAPIView):
+    serializer_class = CarAdvertismentSerializer
+

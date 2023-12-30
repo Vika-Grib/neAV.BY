@@ -5,7 +5,6 @@ from .views import *
 
 app_name = 'car'
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 
 # подключаем API используя автоматическую маршрутизацию URL routing адресов
@@ -13,6 +12,11 @@ router.register(r'groups', views.GroupViewSet)
 # api/v1/mainapp/car/create/
 # api/v1/mainapp/all/
 # api/v1/mainapp/car/detail/1
+# api/v1/mainapp/car/advert/
+# api/v1/mainapp/car/advert/create/
+# api/v1/mainapp/users/all/
+
+
 
 urlpatterns = [
     path('', include(router.urls)),
@@ -20,6 +24,10 @@ urlpatterns = [
     path('car/create/', CarCreateView.as_view()),
     path('all/', CarListView.as_view()),
     path('car/detail/<int:pk>/', CarDetailView.as_view()),
+    path('car/advert/', CarAdvertisment.as_view()),
+    path('car/advert/create/', AdvertCreateView.as_view()),
+    path('users/all/', UserView.as_view()),
+    path('users/create/', UserCreateView.as_view())
 ]
 
 urlpatterns += router.urls
