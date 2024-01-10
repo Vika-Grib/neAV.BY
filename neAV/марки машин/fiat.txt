@@ -1,0 +1,32 @@
+https://cars.av.by/fiat/124-spider 124 Spider 8 True
+https://cars.av.by/fiat/126 126 1 True
+https://cars.av.by/fiat/131 131 1 True
+https://cars.av.by/fiat/500 500 11 True
+https://cars.av.by/fiat/500l 500L 8 True
+https://cars.av.by/fiat/500x 500X 6 True
+https://cars.av.by/fiat/500e 500е 12 True
+https://cars.av.by/fiat/albea Albea 2 True
+https://cars.av.by/fiat/brava Brava 70 True
+https://cars.av.by/fiat/bravo Bravo 34 True
+https://cars.av.by/fiat/coupe Coupe 4 True
+https://cars.av.by/fiat/croma Croma 6 True
+https://cars.av.by/fiat/doblo Doblo 56 True
+https://cars.av.by/fiat/fiorino Fiorino 11 True
+https://cars.av.by/fiat/freemont Freemont 4 True
+https://cars.av.by/fiat/grande-punto Grande Punto 13 True
+https://cars.av.by/fiat/idea Idea 1 True
+https://cars.av.by/fiat/linea Linea 2 True
+https://cars.av.by/fiat/marea Marea 80 True
+https://cars.av.by/fiat/multipla Multipla 13 True
+https://cars.av.by/fiat/palio Palio 32 True
+https://cars.av.by/fiat/panda Panda 11 True
+https://cars.av.by/fiat/punto Punto 103 True
+https://cars.av.by/fiat/punto-evo Punto Evo 4 True
+https://cars.av.by/fiat/qubo Qubo 9 True
+https://cars.av.by/fiat/scudo Scudo 32 True
+https://cars.av.by/fiat/seicento Seicento 2 True
+https://cars.av.by/fiat/stilo Stilo 42 True
+https://cars.av.by/fiat/tempra Tempra 12 True
+https://cars.av.by/fiat/tipo Tipo 27 True
+https://cars.av.by/fiat/ulysse Ulysse 58 True
+https://cars.av.by/fiat/uno Uno 2 True

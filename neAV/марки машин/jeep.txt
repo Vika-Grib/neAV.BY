@@ -1,0 +1,8 @@
+https://cars.av.by/jeep/cherokee Cherokee 48 True
+https://cars.av.by/jeep/commander Commander 5 True
+https://cars.av.by/jeep/compass Compass 57 True
+https://cars.av.by/jeep/grand-cherokee Grand Cherokee 99 True
+https://cars.av.by/jeep/liberty Liberty 5 True
+https://cars.av.by/jeep/patriot Patriot 6 True
+https://cars.av.by/jeep/renegade Renegade 20 True
+https://cars.av.by/jeep/wrangler Wrangler 41 True

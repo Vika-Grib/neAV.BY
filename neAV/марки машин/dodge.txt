@@ -1,0 +1,18 @@
+https://cars.av.by/dodge/avenger Avenger 3 True
+https://cars.av.by/dodge/caliber Caliber 38 True
+https://cars.av.by/dodge/caravan Caravan 68 True
+https://cars.av.by/dodge/challenger Challenger 40 True
+https://cars.av.by/dodge/charger Charger 9 True
+https://cars.av.by/dodge/dakota Dakota 2 True
+https://cars.av.by/dodge/dart Dart 4 True
+https://cars.av.by/dodge/durango Durango 9 True
+https://cars.av.by/dodge/grand-caravan Grand Caravan 45 True
+https://cars.av.by/dodge/intrepid Intrepid 9 True
+https://cars.av.by/dodge/journey Journey 43 True
+https://cars.av.by/dodge/magnum Magnum 4 True
+https://cars.av.by/dodge/neon Neon 17 True
+https://cars.av.by/dodge/nitro Nitro 2 True
+https://cars.av.by/dodge/ram RAM 17 True
+https://cars.av.by/dodge/ram-promaster-city RAM ProMaster City 2 True
+https://cars.av.by/dodge/ram-van Ram van 3 True
+https://cars.av.by/dodge/stratus Stratus 35 True

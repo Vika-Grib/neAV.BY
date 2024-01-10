@@ -1,0 +1,31 @@
+https://cars.av.by/mazda/121 121 1 True
+https://cars.av.by/mazda/2 2 43 True
+https://cars.av.by/mazda/3 3 253 True
+https://cars.av.by/mazda/3-mps 3 MPS 4 True
+https://cars.av.by/mazda/323 323 59 True
+https://cars.av.by/mazda/323f 323F 70 True
+https://cars.av.by/mazda/5 5 56 True
+https://cars.av.by/mazda/6 6 411 True
+https://cars.av.by/mazda/626 626 185 True
+https://cars.av.by/mazda/bt-50 BT-50 3 True
+https://cars.av.by/mazda/capella Capella 1 True
+https://cars.av.by/mazda/cx-3 CX-3 15 True
+https://cars.av.by/mazda/cx-30 CX-30 24 True
+https://cars.av.by/mazda/cx-5 CX-5 243 True
+https://cars.av.by/mazda/cx-60 CX-60 1 True
+https://cars.av.by/mazda/cx-7 CX-7 70 True
+https://cars.av.by/mazda/cx-9 CX-9 67 True
+https://cars.av.by/mazda/demio Demio 15 True
+https://cars.av.by/mazda/e-series E-Series 2 True
+https://cars.av.by/mazda/millenia Millenia 10 True
+https://cars.av.by/mazda/mpv MPV 48 True
+https://cars.av.by/mazda/mx-3 MX-3 1 True
+https://cars.av.by/mazda/mx-30 MX-30 5 True
+https://cars.av.by/mazda/mx-5 MX-5 8 True
+https://cars.av.by/mazda/mx-6 MX-6 2 True
+https://cars.av.by/mazda/premacy Premacy 30 True
+https://cars.av.by/mazda/protege Protege 10 True
+https://cars.av.by/mazda/rx-8 RX-8 4 True
+https://cars.av.by/mazda/tribute Tribute 10 True
+https://cars.av.by/mazda/xedos-6 Xedos 6 16 True
+https://cars.av.by/mazda/xedos-9 Xedos 9 12 True

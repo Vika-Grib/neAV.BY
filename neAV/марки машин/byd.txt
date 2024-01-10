@@ -1,0 +1,15 @@
+https://cars.av.by/byd/dolphin Dolphin 36 True
+https://cars.av.by/byd/e2 e2 13 True
+https://cars.av.by/byd/e5 e5 1 True
+https://cars.av.by/byd/e6 E6 1 True
+https://cars.av.by/byd/f3 F3 2 True
+https://cars.av.by/byd/han Han 17 True
+https://cars.av.by/byd/qin Qin 3 True
+https://cars.av.by/byd/seagull Seagull 12 True
+https://cars.av.by/byd/seal Seal 4 True
+https://cars.av.by/byd/song-plus-ev Song Plus EV 50 True
+https://cars.av.by/byd/song-pro Song Pro 5 True
+https://cars.av.by/byd/tang Tang 9 True
+https://cars.av.by/byd/yuan Yuan 10 True
+https://cars.av.by/byd/yuan-plus Yuan Plus 15 True
+https://cars.av.by/byd/yuan-pro Yuan Pro 8 True

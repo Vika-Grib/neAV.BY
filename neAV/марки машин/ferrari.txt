@@ -1,0 +1,3 @@
+https://cars.av.by/ferrari/360 360 1 True
+https://cars.av.by/ferrari/488-gtb 488 GTB 1 True
+https://cars.av.by/ferrari/portofino Portofino 1 True

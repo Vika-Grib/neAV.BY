@@ -1,0 +1,18 @@
+https://cars.av.by/suzuki/aerio Aerio 1 True
+https://cars.av.by/suzuki/alto Alto 7 True
+https://cars.av.by/suzuki/baleno Baleno 39 True
+https://cars.av.by/suzuki/forenza Forenza 5 True
+https://cars.av.by/suzuki/grand-vitara Grand Vitara 68 True
+https://cars.av.by/suzuki/ignis Ignis 2 True
+https://cars.av.by/suzuki/jimny Jimny 4 True
+https://cars.av.by/suzuki/kizashi Kizashi 4 True
+https://cars.av.by/suzuki/liana Liana 15 True
+https://cars.av.by/suzuki/reno Reno 1 True
+https://cars.av.by/suzuki/samurai Samurai 2 True
+https://cars.av.by/suzuki/splash Splash 8 True
+https://cars.av.by/suzuki/swift Swift 19 True
+https://cars.av.by/suzuki/sx4 SX4 42 True
+https://cars.av.by/suzuki/vitara Vitara 12 True
+https://cars.av.by/suzuki/wagon-rplus Wagon R+ 12 True
+https://cars.av.by/suzuki/x-90 X-90 1 True
+https://cars.av.by/suzuki/xl-7 XL-7 7 True

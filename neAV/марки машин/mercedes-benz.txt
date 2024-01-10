@@ -1,0 +1,58 @@
+https://cars.av.by/mercedes-benz/190-w201 190 (W201) 33 True
+https://cars.av.by/mercedes-benz/a-klass A-Класс 164 True
+https://cars.av.by/mercedes-benz/a-klass-amg A-Класс AMG 5 True
+https://cars.av.by/mercedes-benz/amg-gt AMG GT 7 True
+https://cars.av.by/mercedes-benz/b-klass B-Класс 108 True
+https://cars.av.by/mercedes-benz/c-klass C-Класс 526 True
+https://cars.av.by/mercedes-benz/c-klass-amg C-Класс AMG 6 True
+https://cars.av.by/mercedes-benz/citan Citan 11 True
+https://cars.av.by/mercedes-benz/cl CL 10 True
+https://cars.av.by/mercedes-benz/cl-amg CL AMG 3 True
+https://cars.av.by/mercedes-benz/cla CLA 100 True
+https://cars.av.by/mercedes-benz/cla-amg CLA AMG 5 True
+https://cars.av.by/mercedes-benz/clc CLC 2 True
+https://cars.av.by/mercedes-benz/clk CLK 49 True
+https://cars.av.by/mercedes-benz/cls CLS 61 True
+https://cars.av.by/mercedes-benz/e-klass E-Класс 915 True
+https://cars.av.by/mercedes-benz/e-klass-all-terrain E-Класс All-Terrain 6 True
+https://cars.av.by/mercedes-benz/e-klass-amg E-Класс AMG 11 True
+https://cars.av.by/mercedes-benz/eqb EQB 1 True
+https://cars.av.by/mercedes-benz/eqc EQC 9 True
+https://cars.av.by/mercedes-benz/eqe EQE 3 True
+https://cars.av.by/mercedes-benz/eqe-suv EQE SUV 1 True
+https://cars.av.by/mercedes-benz/eqs EQS 8 True
+https://cars.av.by/mercedes-benz/eqs-suv EQS SUV 3 True
+https://cars.av.by/mercedes-benz/g-klass G-Класс 26 True
+https://cars.av.by/mercedes-benz/g-klass-amg G-Класс AMG 13 True
+https://cars.av.by/mercedes-benz/gl-klass GL-Класс 132 True
+https://cars.av.by/mercedes-benz/gl-klass-amg GL-Класс AMG 6 True
+https://cars.av.by/mercedes-benz/gla GLA 45 True
+https://cars.av.by/mercedes-benz/gla-amg GLA AMG 5 True
+https://cars.av.by/mercedes-benz/glb GLB 31 True
+https://cars.av.by/mercedes-benz/glc GLC 100 True
+https://cars.av.by/mercedes-benz/glc-coupe GLC Coupe 30 True
+https://cars.av.by/mercedes-benz/glc-coupe-amg GLC Coupe AMG 4 True
+https://cars.av.by/mercedes-benz/gle GLE 89 True
+https://cars.av.by/mercedes-benz/gle-amg GLE AMG 7 True
+https://cars.av.by/mercedes-benz/gle-coupe GLE Coupe 35 True
+https://cars.av.by/mercedes-benz/gle-coupe-amg GLE Coupe AMG 12 True
+https://cars.av.by/mercedes-benz/glk GLK 49 True
+https://cars.av.by/mercedes-benz/gls GLS 48 True
+https://cars.av.by/mercedes-benz/gls-amg GLS AMG 3 True
+https://cars.av.by/mercedes-benz/m-klass M-Класс 234 True
+https://cars.av.by/mercedes-benz/m-klass-amg M-Класс AMG 6 True
+https://cars.av.by/mercedes-benz/maybach Maybach 2 True
+https://cars.av.by/mercedes-benz/maybach-gls Maybach GLS 1 True
+https://cars.av.by/mercedes-benz/mb MB 9 True
+https://cars.av.by/mercedes-benz/metris Metris 4 True
+https://cars.av.by/mercedes-benz/r-klass R-Класс 25 True
+https://cars.av.by/mercedes-benz/s-klass S-Класс 324 True
+https://cars.av.by/mercedes-benz/s-klass-amg S-Класс AMG 9 True
+https://cars.av.by/mercedes-benz/sl SL 2 True
+https://cars.av.by/mercedes-benz/slc SLC 3 True
+https://cars.av.by/mercedes-benz/slk SLK 10 True
+https://cars.av.by/mercedes-benz/v-klass V-Класс 86 True
+https://cars.av.by/mercedes-benz/vaneo Vaneo 18 True
+https://cars.av.by/mercedes-benz/viano Viano 60 True
+https://cars.av.by/mercedes-benz/vito Vito 157 True
+https://cars.av.by/mercedes-benz/x-klass X-класс 1 True

@@ -1,0 +1,7 @@
+https://cars.av.by/lifan/cebrium Cebrium 1 True
+https://cars.av.by/lifan/myway MyWay 6 True
+https://cars.av.by/lifan/smily Smily 1 True
+https://cars.av.by/lifan/solano Solano 8 True
+https://cars.av.by/lifan/x50 X50 5 True
+https://cars.av.by/lifan/x60 X60 32 True
+https://cars.av.by/lifan/x70 X70 5 True

@@ -1,0 +1,33 @@
+https://cars.av.by/opel/adam Adam 1 True
+https://cars.av.by/opel/agila Agila 31 True
+https://cars.av.by/opel/ampera Ampera 15 True
+https://cars.av.by/opel/antara Antara 50 True
+https://cars.av.by/opel/arena Arena 1 True
+https://cars.av.by/opel/ascona Ascona 10 True
+https://cars.av.by/opel/astra Astra 1130 True
+https://cars.av.by/opel/astra-opc Astra OPC 1 True
+https://cars.av.by/opel/calibra Calibra 6 True
+https://cars.av.by/opel/campo Campo 1 True
+https://cars.av.by/opel/combo Combo 30 True
+https://cars.av.by/opel/combo-xl Combo XL 2 True
+https://cars.av.by/opel/commodore Commodore 1 True
+https://cars.av.by/opel/corsa Corsa 172 True
+https://cars.av.by/opel/crossland-x Crossland X 39 True
+https://cars.av.by/opel/frontera Frontera 29 True
+https://cars.av.by/opel/grandland-x Grandland X 156 True
+https://cars.av.by/opel/insignia Insignia 467 True
+https://cars.av.by/opel/insignia-opc Insignia OPC 2 True
+https://cars.av.by/opel/kadett Kadett 17 True
+https://cars.av.by/opel/karl Karl 2 True
+https://cars.av.by/opel/meriva Meriva 83 True
+https://cars.av.by/opel/mokka Mokka 81 True
+https://cars.av.by/opel/monterey Monterey 14 True
+https://cars.av.by/opel/omega Omega 250 True
+https://cars.av.by/opel/rekord Rekord 7 True
+https://cars.av.by/opel/signum Signum 30 True
+https://cars.av.by/opel/sintra Sintra 37 True
+https://cars.av.by/opel/tigra Tigra 7 True
+https://cars.av.by/opel/vectra Vectra 493 True
+https://cars.av.by/opel/vivaro Vivaro 54 True
+https://cars.av.by/opel/zafira Zafira 639 True
+https://cars.av.by/opel/zafira-life Zafira Life 7 True

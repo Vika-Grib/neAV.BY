@@ -1,0 +1,4 @@
+https://cars.av.by/genesis/g70 G70 7 True
+https://cars.av.by/genesis/g80 G80 1 True
+https://cars.av.by/genesis/g90 G90 2 True
+https://cars.av.by/genesis/gv80 GV80 3 True

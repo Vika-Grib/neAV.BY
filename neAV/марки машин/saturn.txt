@@ -1,0 +1,2 @@
+https://cars.av.by/saturn/sl SL 1 True
+https://cars.av.by/saturn/vue VUE 2 True

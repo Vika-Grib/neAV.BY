@@ -1,0 +1,4 @@
+https://cars.av.by/scion/tc tC 1 True
+https://cars.av.by/scion/xa xA 2 True
+https://cars.av.by/scion/xb xB 1 True
+https://cars.av.by/scion/xd xD 2 True

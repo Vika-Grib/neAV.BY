@@ -1,0 +1,22 @@
+https://cars.av.by/chery/a1 A1 1 True
+https://cars.av.by/chery/a13 A13 12 True
+https://cars.av.by/chery/amulet Amulet 3 True
+https://cars.av.by/chery/cowin Cowin 1 True
+https://cars.av.by/chery/crosseastar-b14 CrossEastar B14 2 True
+https://cars.av.by/chery/eq5 EQ5 2 True
+https://cars.av.by/chery/fora Fora 3 True
+https://cars.av.by/chery/indis Indis 2 True
+https://cars.av.by/chery/m11 M11 1 True
+https://cars.av.by/chery/qq QQ 1 True
+https://cars.av.by/chery/qq6 QQ6 3 True
+https://cars.av.by/chery/tiggo Tiggo 19 True
+https://cars.av.by/chery/tiggo-2 Tiggo 2 3 True
+https://cars.av.by/chery/tiggo-3 Tiggo 3 13 True
+https://cars.av.by/chery/tiggo4 Tiggo 4 5 True
+https://cars.av.by/chery/tiggo-4-pro Tiggo 4 Pro 2 True
+https://cars.av.by/chery/tiggo-5 Tiggo 5 4 True
+https://cars.av.by/chery/tiggo-7 Tiggo 7 3 True
+https://cars.av.by/chery/tiggo-7-pro Tiggo 7 PRO 6 True
+https://cars.av.by/chery/tiggo-8 Tiggo 8 1 True
+https://cars.av.by/chery/tiggo-8-pro-max Tiggo 8 PRO MAX 2 True
+https://cars.av.by/chery/very Very 3 True

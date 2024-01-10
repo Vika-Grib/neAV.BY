@@ -1,0 +1,34 @@
+https://cars.av.by/mitsubishi/3000gt 3000GT 1 True
+https://cars.av.by/mitsubishi/asx ASX 68 True
+https://cars.av.by/mitsubishi/carisma Carisma 59 True
+https://cars.av.by/mitsubishi/colt Colt 70 True
+https://cars.av.by/mitsubishi/delica Delica 2 True
+https://cars.av.by/mitsubishi/diamante Diamante 1 True
+https://cars.av.by/mitsubishi/eclipse Eclipse 18 True
+https://cars.av.by/mitsubishi/eclipse-cross Eclipse Cross 80 True
+https://cars.av.by/mitsubishi/ek-space EK-Space 1 True
+https://cars.av.by/mitsubishi/endeavor Endeavor 1 True
+https://cars.av.by/mitsubishi/galant Galant 68 True
+https://cars.av.by/mitsubishi/grandis Grandis 15 True
+https://cars.av.by/mitsubishi/i-miev i-MiEV 7 True
+https://cars.av.by/mitsubishi/l200 L200 19 True
+https://cars.av.by/mitsubishi/l300 L300 5 True
+https://cars.av.by/mitsubishi/l-400 L400 3 True
+https://cars.av.by/mitsubishi/lancer Lancer 116 True
+https://cars.av.by/mitsubishi/lancer-evolution Lancer Evolution 3 True
+https://cars.av.by/mitsubishi/legnum Legnum 1 True
+https://cars.av.by/mitsubishi/mirage Mirage 9 True
+https://cars.av.by/mitsubishi/montero Montero 7 True
+https://cars.av.by/mitsubishi/montero-sport Montero Sport 4 True
+https://cars.av.by/mitsubishi/outlander Outlander 241 True
+https://cars.av.by/mitsubishi/outlander-sport Outlander Sport 12 True
+https://cars.av.by/mitsubishi/pajero Pajero 72 True
+https://cars.av.by/mitsubishi/pajero-pinin Pajero Pinin 6 True
+https://cars.av.by/mitsubishi/pajero-sport Pajero Sport 43 True
+https://cars.av.by/mitsubishi/sapporo Sapporo 1 True
+https://cars.av.by/mitsubishi/sigma Sigma 1 True
+https://cars.av.by/mitsubishi/space-gear Space Gear 4 True
+https://cars.av.by/mitsubishi/space-runner Space Runner 15 True
+https://cars.av.by/mitsubishi/space-star Space Star 59 True
+https://cars.av.by/mitsubishi/space-wagon Space Wagon 49 True
+https://cars.av.by/mitsubishi/xpander Xpander 2 True

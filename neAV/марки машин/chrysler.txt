@@ -1,0 +1,18 @@
+https://cars.av.by/chrysler/300s 300C 25 True
+https://cars.av.by/chrysler/300m 300M 9 True
+https://cars.av.by/chrysler/cirrus Cirrus 4 True
+https://cars.av.by/chrysler/concorde Concorde 3 True
+https://cars.av.by/chrysler/crossfire Crossfire 4 True
+https://cars.av.by/chrysler/grand-voyager Grand Voyager 33 True
+https://cars.av.by/chrysler/intrepid Intrepid 3 True
+https://cars.av.by/chrysler/le-baron Le Baron 1 True
+https://cars.av.by/chrysler/lhs LHS 5 True
+https://cars.av.by/chrysler/neon Neon 18 True
+https://cars.av.by/chrysler/pacifica Pacifica 43 True
+https://cars.av.by/chrysler/pt-cruiser PT Cruiser 25 True
+https://cars.av.by/chrysler/saratoga Saratoga 1 True
+https://cars.av.by/chrysler/sebring Sebring 27 True
+https://cars.av.by/chrysler/stratus Stratus 5 True
+https://cars.av.by/chrysler/town-and-country Town and Country 42 True
+https://cars.av.by/chrysler/vision Vision 1 True
+https://cars.av.by/chrysler/voyager Voyager 127 True

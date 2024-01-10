@@ -1,0 +1,4 @@
+https://cars.av.by/exeed/lx LX 2 True
+https://cars.av.by/exeed/rx RX 1 True
+https://cars.av.by/exeed/txl TXL 2 True
+https://cars.av.by/exeed/vx VX 2 True

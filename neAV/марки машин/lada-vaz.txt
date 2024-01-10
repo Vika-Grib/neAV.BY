@@ -1,0 +1,31 @@
+https://cars.av.by/lada-vaz/1111-oka 1111 Ока 3 True
+https://cars.av.by/lada-vaz/2101 2101 36 True
+https://cars.av.by/lada-vaz/21013 21013 14 True
+https://cars.av.by/lada-vaz/2102 2102 9 True
+https://cars.av.by/lada-vaz/2103 2103 8 True
+https://cars.av.by/lada-vaz/2104 2104 13 True
+https://cars.av.by/lada-vaz/2105 2105 28 True
+https://cars.av.by/lada-vaz/2106 2106 79 True
+https://cars.av.by/lada-vaz/2107 2107 26 True
+https://cars.av.by/lada-vaz/2108 2108 19 True
+https://cars.av.by/lada-vaz/2109 2109 21 True
+https://cars.av.by/lada-vaz/21099 21099 10 True
+https://cars.av.by/lada-vaz/2110 2110 11 True
+https://cars.av.by/lada-vaz/2111 2111 7 True
+https://cars.av.by/lada-vaz/2112 2112 7 True
+https://cars.av.by/lada-vaz/2114 2114 22 True
+https://cars.av.by/lada-vaz/2115 2115 24 True
+https://cars.av.by/lada-vaz/2121-niva 2121 Нива 116 True
+https://cars.av.by/lada-vaz/2123 2123 1 True
+https://cars.av.by/lada-vaz/2131-niva 2131 Нива 27 True
+https://cars.av.by/lada-vaz/2345-vis 2345 ВИС 2 True
+https://cars.av.by/lada-vaz/2347-vis 2347 ВИС 1 True
+https://cars.av.by/lada-vaz/granta Granta 89 True
+https://cars.av.by/lada-vaz/kalina Kalina 14 True
+https://cars.av.by/lada-vaz/largus Largus 119 True
+https://cars.av.by/lada-vaz/niva-travel Niva Travel 5 True
+https://cars.av.by/lada-vaz/priora Priora 30 True
+https://cars.av.by/lada-vaz/vesta Vesta 361 True
+https://cars.av.by/lada-vaz/vesta-cross Vesta Cross 27 True
+https://cars.av.by/lada-vaz/xray XRAY 76 True
+https://cars.av.by/lada-vaz/xray-cross XRAY Cross 4 True

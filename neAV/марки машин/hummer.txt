@@ -1,0 +1,2 @@
+https://cars.av.by/hummer/h2 H2 10 True
+https://cars.av.by/hummer/h3 H3 6 True

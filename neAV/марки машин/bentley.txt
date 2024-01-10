@@ -1,0 +1,4 @@
+https://cars.av.by/bentley/bentayga Bentayga 4 True
+https://cars.av.by/bentley/continental-flying-spur Continental Flying Spur 1 True
+https://cars.av.by/bentley/continental-gt Continental GT 9 True
+https://cars.av.by/bentley/flying-spur Flying Spur 3 True

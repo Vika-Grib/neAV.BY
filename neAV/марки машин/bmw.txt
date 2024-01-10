@@ -1,0 +1,36 @@
+https://cars.av.by/bmw/1-seriya 1 серия 126 True
+https://cars.av.by/bmw/2-seriya 2 серия 41 True
+https://cars.av.by/bmw/2-seriya-active-tourer 2 серия Active Tourer 56 True
+https://cars.av.by/bmw/2-seriya-gran-tourer 2 серия Gran Tourer 137 True
+https://cars.av.by/bmw/2000-c-cs 2000 C/CS 1 True
+https://cars.av.by/bmw/3-seriya 3 серия 1107 True
+https://cars.av.by/bmw/340-baumaster 340 Baumaster 1 True
+https://cars.av.by/bmw/4-seriya 4 серия 133 True
+https://cars.av.by/bmw/5-seriya 5 серия 1474 True
+https://cars.av.by/bmw/6-seriya 6 серия 87 True
+https://cars.av.by/bmw/7-seriya 7 серия 501 True
+https://cars.av.by/bmw/8-seriya 8 серия 17 True
+https://cars.av.by/bmw/i3 i3 122 True
+https://cars.av.by/bmw/i4 i4 2 True
+https://cars.av.by/bmw/i8 i8 4 True
+https://cars.av.by/bmw/ix iX 23 True
+https://cars.av.by/bmw/ix3 iX3 2 True
+https://cars.av.by/bmw/m2 M2 1 True
+https://cars.av.by/bmw/m3 M3 7 True
+https://cars.av.by/bmw/m4 M4 6 True
+https://cars.av.by/bmw/m5 M5 11 True
+https://cars.av.by/bmw/m6 M6 3 True
+https://cars.av.by/bmw/m8 M8 7 True
+https://cars.av.by/bmw/x1 X1 224 True
+https://cars.av.by/bmw/x2 X2 71 True
+https://cars.av.by/bmw/x3 X3 467 True
+https://cars.av.by/bmw/x3m X3M 8 True
+https://cars.av.by/bmw/x4 X4 94 True
+https://cars.av.by/bmw/x4m X4M 3 True
+https://cars.av.by/bmw/x5 X5 664 True
+https://cars.av.by/bmw/x5m X5M 9 True
+https://cars.av.by/bmw/x6 X6 215 True
+https://cars.av.by/bmw/x6m X6M 20 True
+https://cars.av.by/bmw/x7 X7 82 True
+https://cars.av.by/bmw/xm XM 3 True
+https://cars.av.by/bmw/z4 Z4 9 True

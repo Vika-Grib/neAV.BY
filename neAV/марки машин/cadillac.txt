@@ -1,0 +1,16 @@
+https://cars.av.by/cadillac/ats ATS 3 True
+https://cars.av.by/cadillac/bls BLS 2 True
+https://cars.av.by/cadillac/brougham Brougham 1 True
+https://cars.av.by/cadillac/catera Catera 1 True
+https://cars.av.by/cadillac/ct5 CT5 2 True
+https://cars.av.by/cadillac/ct6 CT6 1 True
+https://cars.av.by/cadillac/cts CTS 15 True
+https://cars.av.by/cadillac/de-ville De Ville 8 True
+https://cars.av.by/cadillac/eldorado Eldorado 1 True
+https://cars.av.by/cadillac/elr ELR 2 True
+https://cars.av.by/cadillac/escalade Escalade 22 True
+https://cars.av.by/cadillac/seville Seville 1 True
+https://cars.av.by/cadillac/srx SRX 10 True
+https://cars.av.by/cadillac/sts STS 2 True
+https://cars.av.by/cadillac/xt4 XT4 25 True
+https://cars.av.by/cadillac/xt5 XT5 4 True

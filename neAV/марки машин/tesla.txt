@@ -1,0 +1,4 @@
+https://cars.av.by/tesla/model-3 Model 3 178 True
+https://cars.av.by/tesla/model-s Model S 132 True
+https://cars.av.by/tesla/model-x Model X 55 True
+https://cars.av.by/tesla/model-y Model Y 90 True

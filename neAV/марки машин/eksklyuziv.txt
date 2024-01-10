@@ -1,0 +1,9 @@
+https://cars.av.by/eksklyuziv/avtodom Автодом 32 True
+https://cars.av.by/eksklyuziv/baggi Багги 6 True
+https://cars.av.by/eksklyuziv/vezdehod Вездеход 4 True
+https://cars.av.by/eksklyuziv/voennaya-tehnika Военная техника 3 True
+https://cars.av.by/eksklyuziv/kart Карт 2 True
+https://cars.av.by/eksklyuziv/redkaya-model Редкая модель 7 True
+https://cars.av.by/eksklyuziv/retro Ретро 7 True
+https://cars.av.by/eksklyuziv/samodelnyj Самодельный 4 True
+https://cars.av.by/eksklyuziv/sport Спорт 2 True

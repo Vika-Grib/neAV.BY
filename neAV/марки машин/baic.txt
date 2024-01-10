@@ -1,0 +1,4 @@
+https://cars.av.by/baic/bj20 BJ20 1 True
+https://cars.av.by/baic/u5-plus U5 Plus 3 True
+https://cars.av.by/baic/x35 X35 2 True
+https://cars.av.by/baic/x55 X55 1 True

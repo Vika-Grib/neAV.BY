@@ -1,0 +1,54 @@
+https://cars.av.by/ford/aerostar Aerostar 2 True
+https://cars.av.by/ford/b-max B-MAX 10 True
+https://cars.av.by/ford/bronco Bronco 2 True
+https://cars.av.by/ford/bronco-sport Bronco Sport 18 True
+https://cars.av.by/ford/c-max C-MAX 140 True
+https://cars.av.by/ford/capri Capri 1 True
+https://cars.av.by/ford/contour Contour 5 True
+https://cars.av.by/ford/cougar Cougar 2 True
+https://cars.av.by/ford/econovan Econovan 1 True
+https://cars.av.by/ford/ecosport EcoSport 59 True
+https://cars.av.by/ford/edge Edge 195 True
+https://cars.av.by/ford/escape Escape 369 True
+https://cars.av.by/ford/escort Escort 102 True
+https://cars.av.by/ford/excursion Excursion 1 True
+https://cars.av.by/ford/expedition Expedition 7 True
+https://cars.av.by/ford/explorer Explorer 184 True
+https://cars.av.by/ford/f-150 F-150 22 True
+https://cars.av.by/ford/f-250 F-250 1 True
+https://cars.av.by/ford/f-350 F-350 4 True
+https://cars.av.by/ford/fiesta Fiesta 104 True
+https://cars.av.by/ford/fiesta-st Fiesta ST 2 True
+https://cars.av.by/ford/five-hundred Five Hundred 1 True
+https://cars.av.by/ford/flex Flex 2 True
+https://cars.av.by/ford/focus Focus 703 True
+https://cars.av.by/ford/focus-rs Focus RS 1 True
+https://cars.av.by/ford/focus-st Focus ST 1 True
+https://cars.av.by/ford/fusion Fusion 32 True
+https://cars.av.by/ford/fusion-usa Fusion USA 243 True
+https://cars.av.by/ford/galaxy Galaxy 309 True
+https://cars.av.by/ford/granada Granada 2 True
+https://cars.av.by/ford/grand-c-max Grand C-Max 52 True
+https://cars.av.by/ford/ka Ka 11 True
+https://cars.av.by/ford/kuga Kuga 136 True
+https://cars.av.by/ford/ltd LTD 1 True
+https://cars.av.by/ford/maverick Maverick 7 True
+https://cars.av.by/ford/mondeo Mondeo 615 True
+https://cars.av.by/ford/mustang Mustang 89 True
+https://cars.av.by/ford/mustangmach-e Mustang Mach-E 5 True
+https://cars.av.by/ford/orion Orion 11 True
+https://cars.av.by/ford/probe Probe 7 True
+https://cars.av.by/ford/puma Puma 2 True
+https://cars.av.by/ford/ranger Ranger 10 True
+https://cars.av.by/ford/s-max S-MAX 206 True
+https://cars.av.by/ford/scorpio Scorpio 31 True
+https://cars.av.by/ford/sierra Sierra 58 True
+https://cars.av.by/ford/taunus Taunus 5 True
+https://cars.av.by/ford/taurus Taurus 10 True
+https://cars.av.by/ford/tourneo-connect Tourneo Connect 38 True
+https://cars.av.by/ford/tourneo-courier Tourneo Courier 9 True
+https://cars.av.by/ford/tourneo-custom Tourneo Custom 30 True
+https://cars.av.by/ford/transit-connect Transit Connect 19 True
+https://cars.av.by/ford/transit-custom Transit Custom 24 True
+https://cars.av.by/ford/transit-tourneo Transit Tourneo 64 True
+https://cars.av.by/ford/windstar Windstar 2 True

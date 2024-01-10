@@ -1,0 +1,54 @@
+https://cars.av.by/volkswagen/amarok Amarok 17 True
+https://cars.av.by/volkswagen/arteon Arteon 30 True
+https://cars.av.by/volkswagen/atlas Atlas 43 True
+https://cars.av.by/volkswagen/atlas-cross-sport Atlas Cross Sport 17 True
+https://cars.av.by/volkswagen/beetle Beetle 19 True
+https://cars.av.by/volkswagen/bora Bora 33 True
+https://cars.av.by/volkswagen/caddy Caddy 120 True
+https://cars.av.by/volkswagen/caddy-maxi Caddy MAXI 94 True
+https://cars.av.by/volkswagen/california California 2 True
+https://cars.av.by/volkswagen/caravelle Caravelle 222 True
+https://cars.av.by/volkswagen/corrado Corrado 1 True
+https://cars.av.by/volkswagen/derby Derby 2 True
+https://cars.av.by/volkswagen/e-golf e-Golf 36 True
+https://cars.av.by/volkswagen/e-lavida e-Lavida 1 True
+https://cars.av.by/volkswagen/eos Eos 4 True
+https://cars.av.by/volkswagen/fox Fox 8 True
+https://cars.av.by/volkswagen/gol Gol 2 True
+https://cars.av.by/volkswagen/golf Golf 933 True
+https://cars.av.by/volkswagen/alltrack Golf Alltrack 10 True
+https://cars.av.by/volkswagen/golf-gtd Golf GTD 3 True
+https://cars.av.by/volkswagen/golf-gti Golf GTI 26 True
+https://cars.av.by/volkswagen/golf-plus Golf Plus 54 True
+https://cars.av.by/volkswagen/golf-r Golf R 7 True
+https://cars.av.by/volkswagen/golf-sportsvan Golf Sportsvan 20 True
+https://cars.av.by/volkswagen/id-3 ID.3 4 True
+https://cars.av.by/volkswagen/id-4 ID.4 57 True
+https://cars.av.by/volkswagen/id-6 ID.6 19 True
+https://cars.av.by/volkswagen/jetta Jetta 490 True
+https://cars.av.by/volkswagen/lupo Lupo 5 True
+https://cars.av.by/volkswagen/multivan Multivan 225 True
+https://cars.av.by/volkswagen/passat Passat 2126 True
+https://cars.av.by/volkswagen/passat-usa Passat (USA) 35 True
+https://cars.av.by/volkswagen/passat-alltrack Passat Alltrack 30 True
+https://cars.av.by/volkswagen/passat-cc Passat CC 89 True
+https://cars.av.by/volkswagen/phaeton Phaeton 17 True
+https://cars.av.by/volkswagen/polo Polo 171 True
+https://cars.av.by/volkswagen/polo-gti Polo GTI 1 True
+https://cars.av.by/volkswagen/polo-sedan Polo Sedan 587 True
+https://cars.av.by/volkswagen/routan Routan 2 True
+https://cars.av.by/volkswagen/santana Santana 3 True
+https://cars.av.by/volkswagen/scirocco Scirocco 10 True
+https://cars.av.by/volkswagen/sharan Sharan 253 True
+https://cars.av.by/volkswagen/t-cross T-Cross 4 True
+https://cars.av.by/volkswagen/t-roc T-Roc 26 True
+https://cars.av.by/volkswagen/taos Taos  29 True
+https://cars.av.by/volkswagen/teramont Teramont 2 True
+https://cars.av.by/volkswagen/tiguan Tiguan 379 True
+https://cars.av.by/volkswagen/tiguan-allspace Tiguan Allspace 123 True
+https://cars.av.by/volkswagen/touareg Touareg 220 True
+https://cars.av.by/volkswagen/touran Touran 475 True
+https://cars.av.by/volkswagen/transporter Transporter 366 True
+https://cars.av.by/volkswagen/type-2 Type 2 2 True
+https://cars.av.by/volkswagen/up up! 16 True
+https://cars.av.by/volkswagen/vento Vento 46 True

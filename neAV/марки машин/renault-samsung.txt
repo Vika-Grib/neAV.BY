@@ -1,0 +1,4 @@
+https://cars.av.by/renault-samsung/qm3 QM3 1 True
+https://cars.av.by/renault-samsung/qm6 QM6 2 True
+https://cars.av.by/renault-samsung/sm3 SM3 1 True
+https://cars.av.by/renault-samsung/sm6 SM6 1 True

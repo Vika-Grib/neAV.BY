@@ -1,0 +1,4 @@
+https://cars.av.by/pontiac/grand-am Grand AM 1 True
+https://cars.av.by/pontiac/sunbird Sunbird 1 True
+https://cars.av.by/pontiac/trans-sport Trans Sport 11 True
+https://cars.av.by/pontiac/vibe Vibe 15 True

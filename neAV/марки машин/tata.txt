@@ -1,0 +1,3 @@
+https://cars.av.by/tata/indica Indica 1 True
+https://cars.av.by/tata/safari Safari 1 True
+https://cars.av.by/tata/telcoline Telcoline 1 True

@@ -1,0 +1,10 @@
+https://cars.av.by/haval/dargo Dargo 3 True
+https://cars.av.by/haval/f7 F7 17 True
+https://cars.av.by/haval/f7x F7x 14 True
+https://cars.av.by/haval/h2 H2 3 True
+https://cars.av.by/haval/h5 H5 1 True
+https://cars.av.by/haval/h6 H6 10 True
+https://cars.av.by/haval/h6-coupe H6 Coupe 1 True
+https://cars.av.by/haval/h9 H9 5 True
+https://cars.av.by/haval/jolion Jolion 12 True
+https://cars.av.by/haval/m6 M6 4 True

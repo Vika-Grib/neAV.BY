@@ -1,0 +1,5 @@
+https://cars.av.by/faw/bestune-b70 Bestune B70 5 True
+https://cars.av.by/faw/bestune-nat Bestune NAT 1 True
+https://cars.av.by/faw/bestune-t77 Bestune T77 13 True
+https://cars.av.by/faw/bestune-t90 Bestune T90 2 True
+https://cars.av.by/faw/v5 V5 1 True

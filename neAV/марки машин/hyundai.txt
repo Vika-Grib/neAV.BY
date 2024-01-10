@@ -1,0 +1,46 @@
+https://cars.av.by/hyundai/accent Accent 240 True
+https://cars.av.by/hyundai/atos Atos 7 True
+https://cars.av.by/hyundai/avante Avante 1 True
+https://cars.av.by/hyundai/coupe Coupe 9 True
+https://cars.av.by/hyundai/creta Creta 144 True
+https://cars.av.by/hyundai/elantra Elantra 86 True
+https://cars.av.by/hyundai/encino Encino 1 True
+https://cars.av.by/hyundai/equus Equus 3 True
+https://cars.av.by/hyundai/galloper Galloper 10 True
+https://cars.av.by/hyundai/genesis Genesis 5 True
+https://cars.av.by/hyundai/genesis-coupe Genesis coupe 6 True
+https://cars.av.by/hyundai/getz Getz 28 True
+https://cars.av.by/hyundai/grand-santa-fe Grand Santa Fe 13 True
+https://cars.av.by/hyundai/grand-starex Grand Starex 11 True
+https://cars.av.by/hyundai/grandeur Grandeur 8 True
+https://cars.av.by/hyundai/h-1-starex H-1(Starex) 28 True
+https://cars.av.by/hyundai/h100 H100 2 True
+https://cars.av.by/hyundai/h200 H200 2 True
+https://cars.av.by/hyundai/i10 i10 15 True
+https://cars.av.by/hyundai/i20 i20 14 True
+https://cars.av.by/hyundai/i30 i30 58 True
+https://cars.av.by/hyundai/i40 i40 55 True
+https://cars.av.by/hyundai/ioniq Ioniq 15 True
+https://cars.av.by/hyundai/ioniq-5 Ioniq 5 6 True
+https://cars.av.by/hyundai/ix20 ix20 7 True
+https://cars.av.by/hyundai/ix35 ix35 91 True
+https://cars.av.by/hyundai/ix55 ix55 8 True
+https://cars.av.by/hyundai/kona Kona 60 True
+https://cars.av.by/hyundai/lantra Lantra 54 True
+https://cars.av.by/hyundai/matrix Matrix 21 True
+https://cars.av.by/hyundai/palisade Palisade 36 True
+https://cars.av.by/hyundai/pony Pony 8 True
+https://cars.av.by/hyundai/s-coupe S Coupe 1 True
+https://cars.av.by/hyundai/santa-cruz-sel Santa Cruz SEL 3 True
+https://cars.av.by/hyundai/santa-fe Santa Fe 431 True
+https://cars.av.by/hyundai/santamo Santamo 9 True
+https://cars.av.by/hyundai/solaris Solaris 146 True
+https://cars.av.by/hyundai/sonata Sonata 120 True
+https://cars.av.by/hyundai/staria Staria 3 True
+https://cars.av.by/hyundai/terracan Terracan 21 True
+https://cars.av.by/hyundai/tiburon Tiburon 9 True
+https://cars.av.by/hyundai/trajet Trajet 22 True
+https://cars.av.by/hyundai/tucson Tucson 209 True
+https://cars.av.by/hyundai/veloster Veloster 10 True
+https://cars.av.by/hyundai/venue Venue 3 True
+https://cars.av.by/hyundai/xg XG 3 True

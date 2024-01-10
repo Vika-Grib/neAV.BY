@@ -1,0 +1,5 @@
+https://cars.av.by/isuzu/axiom Axiom 4 True
+https://cars.av.by/isuzu/midi Midi 2 True
+https://cars.av.by/isuzu/oasis Oasis 1 True
+https://cars.av.by/isuzu/rodeo Rodeo 2 True
+https://cars.av.by/isuzu/trooper Trooper 7 True

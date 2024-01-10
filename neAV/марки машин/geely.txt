@@ -1,0 +1,24 @@
+https://cars.av.by/geely/atlas Atlas 280 True
+https://cars.av.by/geely/atlas-pro Atlas Pro 50 True
+https://cars.av.by/geely/binyue-cool Binyue Cool 1 True
+https://cars.av.by/geely/boyue Boyue 3 True
+https://cars.av.by/geely/boyue-cool Boyue Cool 3 True
+https://cars.av.by/geely/ck CK 9 True
+https://cars.av.by/geely/coolray Coolray 148 True
+https://cars.av.by/geely/emgrand Emgrand  56 True
+https://cars.av.by/geely/emgrand-ec7 Emgrand EC7 10 True
+https://cars.av.by/geely/emgrand-gt Emgrand GT 1 True
+https://cars.av.by/geely/emgrand-x7 Emgrand X7 158 True
+https://cars.av.by/geely/fc-vision FC (Vision) 1 True
+https://cars.av.by/geely/galaxy-l7 Galaxy L7 1 True
+https://cars.av.by/geely/geometry-c Geometry C 7 True
+https://cars.av.by/geely/geometry-e Geometry E 16 True
+https://cars.av.by/geely/geometry-g6 Geometry G6 2 True
+https://cars.av.by/geely/gs GS 13 True
+https://cars.av.by/geely/lc-cross LC Cross 9 True
+https://cars.av.by/geely/mk MK 4 True
+https://cars.av.by/geely/mk-cross MK Cross 1 True
+https://cars.av.by/geely/monjaro Monjaro 30 True
+https://cars.av.by/geely/okavango Okavango 2 True
+https://cars.av.by/geely/sc7 SC7 38 True
+https://cars.av.by/geely/tugella Tugella 48 True

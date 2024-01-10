@@ -1,0 +1,13 @@
+https://cars.av.by/seat/alhambra Alhambra 118 True
+https://cars.av.by/seat/altea Altea 38 True
+https://cars.av.by/seat/arona Arona 11 True
+https://cars.av.by/seat/arosa Arosa 1 True
+https://cars.av.by/seat/ateca Ateca 35 True
+https://cars.av.by/seat/cordoba Cordoba 37 True
+https://cars.av.by/seat/ibiza Ibiza 72 True
+https://cars.av.by/seat/leon Leon 65 True
+https://cars.av.by/seat/leon-cupra Leon Cupra 1 True
+https://cars.av.by/seat/malaga Malaga 1 True
+https://cars.av.by/seat/mii Mii 7 True
+https://cars.av.by/seat/tarraco Tarraco 12 True
+https://cars.av.by/seat/toledo Toledo 58 True

@@ -1,0 +1,8 @@
+https://cars.av.by/land-rover/defender Defender 19 True
+https://cars.av.by/land-rover/discovery Discovery 66 True
+https://cars.av.by/land-rover/discovery-sport Discovery Sport 51 True
+https://cars.av.by/land-rover/freelander Freelander 47 True
+https://cars.av.by/land-rover/range-rover Range Rover 118 True
+https://cars.av.by/land-rover/range-rover-evoque Range Rover Evoque 67 True
+https://cars.av.by/land-rover/range-rover-sport Range Rover Sport 102 True
+https://cars.av.by/land-rover/range-rover-velar Range Rover Velar 43 True

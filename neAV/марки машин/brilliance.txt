@@ -1,0 +1,3 @@
+https://cars.av.by/brilliance/h230 H230 1 True
+https://cars.av.by/brilliance/v3 V3 1 True
+https://cars.av.by/brilliance/v5 V5 1 True

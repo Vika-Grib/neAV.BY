@@ -1,0 +1,4 @@
+https://cars.av.by/lixiang/l7 L7 43 True
+https://cars.av.by/lixiang/l8 L8 1 True
+https://cars.av.by/lixiang/l9 L9 31 True
+https://cars.av.by/lixiang/one One 3 True

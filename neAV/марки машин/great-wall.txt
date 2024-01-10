@@ -1,0 +1,9 @@
+https://cars.av.by/great-wall/coolbear Coolbear 1 True
+https://cars.av.by/great-wall/deer Deer 1 True
+https://cars.av.by/great-wall/hover Hover 7 True
+https://cars.av.by/great-wall/hover-h3 Hover H3 10 True
+https://cars.av.by/great-wall/hover-h5 Hover H5 3 True
+https://cars.av.by/great-wall/hover-m4 Hover M4 2 True
+https://cars.av.by/great-wall/pegasus Pegasus 1 True
+https://cars.av.by/great-wall/safe Safe 7 True
+https://cars.av.by/great-wall/voleex-c30 Voleex C30 2 True

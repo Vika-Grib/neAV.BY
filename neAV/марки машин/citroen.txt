@@ -1,0 +1,37 @@
+https://cars.av.by/citroen/ax AX 2 True
+https://cars.av.by/citroen/berlingo Berlingo 96 True
+https://cars.av.by/citroen/c-crosser C-Crosser 6 True
+https://cars.av.by/citroen/c-elysee C-Elysee 13 True
+https://cars.av.by/citroen/c-zero C-Zero 2 True
+https://cars.av.by/citroen/c1 C1 13 True
+https://cars.av.by/citroen/c2 C2 17 True
+https://cars.av.by/citroen/c3 C3 98 True
+https://cars.av.by/citroen/c3-aircross C3 Aircross 19 True
+https://cars.av.by/citroen/c3-picasso C3 Picasso 19 True
+https://cars.av.by/citroen/c3-pluriel C3 Pluriel 1 True
+https://cars.av.by/citroen/c4 C4 181 True
+https://cars.av.by/citroen/c4-aircross C4 Aircross 4 True
+https://cars.av.by/citroen/c4-cactus C4 Cactus 41 True
+https://cars.av.by/citroen/c4-grand-picasso C4 Grand Picasso 270 True
+https://cars.av.by/citroen/grand-c4-spacetourer C4 Grand Spacetourer 92 True
+https://cars.av.by/citroen/c4-picasso C4 Picasso 137 True
+https://cars.av.by/citroen/c4-spacetourer C4 Spacetourer  59 True
+https://cars.av.by/citroen/c5 C5 379 True
+https://cars.av.by/citroen/c5-aircross C5 Aircross 121 True
+https://cars.av.by/citroen/c6 C6 3 True
+https://cars.av.by/citroen/c8 C8 29 True
+https://cars.av.by/citroen/cx CX 1 True
+https://cars.av.by/citroen/ds3 DS3 6 True
+https://cars.av.by/citroen/ds4 DS4 11 True
+https://cars.av.by/citroen/ds5 DS5 14 True
+https://cars.av.by/citroen/ds7-crossback DS7 Crossback 35 True
+https://cars.av.by/citroen/evasion Evasion 65 True
+https://cars.av.by/citroen/jumpy Jumpy 22 True
+https://cars.av.by/citroen/nemo Nemo 10 True
+https://cars.av.by/citroen/saxo Saxo 20 True
+https://cars.av.by/citroen/spacetourer SpaceTourer 11 True
+https://cars.av.by/citroen/xantia Xantia 225 True
+https://cars.av.by/citroen/xm XM 12 True
+https://cars.av.by/citroen/xsara Xsara 139 True
+https://cars.av.by/citroen/xsara-picasso Xsara Picasso 123 True
+https://cars.av.by/citroen/zx ZX 19 True

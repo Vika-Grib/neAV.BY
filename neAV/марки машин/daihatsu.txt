@@ -1,0 +1,8 @@
+https://cars.av.by/daihatsu/applause Applause 2 True
+https://cars.av.by/daihatsu/charade Charade 2 True
+https://cars.av.by/daihatsu/cuore Cuore 5 True
+https://cars.av.by/daihatsu/gran-move Gran Move 5 True
+https://cars.av.by/daihatsu/move Move 1 True
+https://cars.av.by/daihatsu/sirion Sirion 11 True
+https://cars.av.by/daihatsu/terios Terios 4 True
+https://cars.av.by/daihatsu/trevis Trevis 1 True

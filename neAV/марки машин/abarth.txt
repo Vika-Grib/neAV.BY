@@ -1,0 +1,3 @@
+https://cars.av.by/abarth/124-spider 124 Spider 4 True
+https://cars.av.by/abarth/500 500 2 True
+https://cars.av.by/abarth/500c 500c 1 True

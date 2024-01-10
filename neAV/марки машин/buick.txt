@@ -1,0 +1,7 @@
+https://cars.av.by/buick/cascada Cascada 2 True
+https://cars.av.by/buick/enclave Enclave 2 True
+https://cars.av.by/buick/encore Encore 166 True
+https://cars.av.by/buick/encore-gx Encore GX 133 True
+https://cars.av.by/buick/envision Envision 40 True
+https://cars.av.by/buick/regal Regal 26 True
+https://cars.av.by/buick/rendezvous RendezVous 3 True

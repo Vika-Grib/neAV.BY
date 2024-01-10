@@ -1,0 +1,8 @@
+https://cars.av.by/dacia/1300 1300 1 True
+https://cars.av.by/dacia/dokker Dokker 12 True
+https://cars.av.by/dacia/duster Duster 34 True
+https://cars.av.by/dacia/lodgy Lodgy 24 True
+https://cars.av.by/dacia/logan Logan 52 True
+https://cars.av.by/dacia/sandero Sandero 15 True
+https://cars.av.by/dacia/sandero-stepway Sandero Stepway 2 True
+https://cars.av.by/dacia/spring Spring 1 True

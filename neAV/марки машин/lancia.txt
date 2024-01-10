@@ -1,0 +1,6 @@
+https://cars.av.by/lancia/delta Delta 12 True
+https://cars.av.by/lancia/kappa Kappa 16 True
+https://cars.av.by/lancia/lybra Lybra 20 True
+https://cars.av.by/lancia/musa Musa 3 True
+https://cars.av.by/lancia/phedra Phedra 4 True
+https://cars.av.by/lancia/zeta Zeta 10 True

@@ -1,0 +1,53 @@
+https://cars.av.by/toyota/4runner 4Runner 10 True
+https://cars.av.by/toyota/alphard Alphard 3 True
+https://cars.av.by/toyota/auris Auris 98 True
+https://cars.av.by/toyota/avalon Avalon 6 True
+https://cars.av.by/toyota/avensis Avensis 193 True
+https://cars.av.by/toyota/avensis-verso Avensis Verso 38 True
+https://cars.av.by/toyota/aygo Aygo 30 True
+https://cars.av.by/toyota/bz3 BZ3 1 True
+https://cars.av.by/toyota/bz4x BZ4X 20 True
+https://cars.av.by/toyota/c-hr C-HR 43 True
+https://cars.av.by/toyota/camry Camry 295 True
+https://cars.av.by/toyota/camry-solara Camry Solara 7 True
+https://cars.av.by/toyota/carina Carina 4 True
+https://cars.av.by/toyota/carina-e Carina E 32 True
+https://cars.av.by/toyota/celica Celica 14 True
+https://cars.av.by/toyota/corolla Corolla 285 True
+https://cars.av.by/toyota/corolla-cross Corolla Cross 1 True
+https://cars.av.by/toyota/corolla-verso Corolla Verso 65 True
+https://cars.av.by/toyota/echo Echo 2 True
+https://cars.av.by/toyota/fj-cruiser FJ Cruiser 3 True
+https://cars.av.by/toyota/fortuner Fortuner 5 True
+https://cars.av.by/toyota/gr86 GR86 2 True
+https://cars.av.by/toyota/gt-86 GT 86 4 True
+https://cars.av.by/toyota/hiace Hiace 6 True
+https://cars.av.by/toyota/highlander Highlander 94 True
+https://cars.av.by/toyota/hilux Hilux 19 True
+https://cars.av.by/toyota/iq iQ 5 True
+https://cars.av.by/toyota/land-cruiser Land Cruiser 114 True
+https://cars.av.by/toyota/land-cruiser-prado Land Cruiser Prado 105 True
+https://cars.av.by/toyota/mark-ii Mark II 1 True
+https://cars.av.by/toyota/matrix Matrix 16 True
+https://cars.av.by/toyota/mr2 MR2 1 True
+https://cars.av.by/toyota/paseo Paseo 4 True
+https://cars.av.by/toyota/picnic Picnic 24 True
+https://cars.av.by/toyota/previa Previa 14 True
+https://cars.av.by/toyota/prius Prius 77 True
+https://cars.av.by/toyota/prius-c Prius C 8 True
+https://cars.av.by/toyota/prius-prime Prius Prime 36 True
+https://cars.av.by/toyota/prius-v-plus Prius V(+) 24 True
+https://cars.av.by/toyota/proace-verso ProAce Verso 10 True
+https://cars.av.by/toyota/rav4 RAV4 310 True
+https://cars.av.by/toyota/sequoia Sequoia 9 True
+https://cars.av.by/toyota/sienna Sienna 48 True
+https://cars.av.by/toyota/starlet Starlet 1 True
+https://cars.av.by/toyota/supra Supra 4 True
+https://cars.av.by/toyota/tacoma Tacoma 5 True
+https://cars.av.by/toyota/tundra Tundra 9 True
+https://cars.av.by/toyota/urban-cruiser Urban Cruiser 15 True
+https://cars.av.by/toyota/venza Venza 50 True
+https://cars.av.by/toyota/verso Verso 40 True
+https://cars.av.by/toyota/verso-s Verso-S 3 True
+https://cars.av.by/toyota/yaris Yaris 182 True
+https://cars.av.by/toyota/yaris-verso Yaris Verso 6 True

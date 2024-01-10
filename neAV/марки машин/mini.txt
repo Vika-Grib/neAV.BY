@@ -1,0 +1,7 @@
+https://cars.av.by/mini/cabrio Cabrio 9 True
+https://cars.av.by/mini/clubman Clubman 48 True
+https://cars.av.by/mini/cooper Cooper 84 True
+https://cars.av.by/mini/cooper-se Cooper SE 4 True
+https://cars.av.by/mini/countryman Countryman 60 True
+https://cars.av.by/mini/coupe Coupe 1 True
+https://cars.av.by/mini/paceman Paceman 2 True

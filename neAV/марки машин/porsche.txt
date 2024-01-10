@@ -1,0 +1,9 @@
+https://cars.av.by/porsche/911 911 5 True
+https://cars.av.by/porsche/924 924 1 True
+https://cars.av.by/porsche/boxster Boxster 5 True
+https://cars.av.by/porsche/cayenne Cayenne 124 True
+https://cars.av.by/porsche/cayenne-coupe Cayenne Coupe 8 True
+https://cars.av.by/porsche/cayman Cayman 3 True
+https://cars.av.by/porsche/macan Macan 49 True
+https://cars.av.by/porsche/panamera Panamera 43 True
+https://cars.av.by/porsche/taycan Taycan 10 True

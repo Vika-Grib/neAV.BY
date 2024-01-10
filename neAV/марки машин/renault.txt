@@ -1,0 +1,40 @@
+https://cars.av.by/renault/18 18 1 True
+https://cars.av.by/renault/19 19 65 True
+https://cars.av.by/renault/21 21 3 True
+https://cars.av.by/renault/5 5 1 True
+https://cars.av.by/renault/arkana Arkana 55 True
+https://cars.av.by/renault/captur Captur 27 True
+https://cars.av.by/renault/city-k-ze City K-ZE 1 True
+https://cars.av.by/renault/clio Clio 191 True
+https://cars.av.by/renault/dokker Dokker 7 True
+https://cars.av.by/renault/duster Duster 216 True
+https://cars.av.by/renault/espace Espace 195 True
+https://cars.av.by/renault/fluence Fluence 24 True
+https://cars.av.by/renault/fluence-ze Fluence Z.E. 3 True
+https://cars.av.by/renault/grand-espace Grand Espace 27 True
+https://cars.av.by/renault/grand-scenic Grand Scenic 408 True
+https://cars.av.by/renault/kadjar Kadjar 182 True
+https://cars.av.by/renault/kangoo Kangoo 73 True
+https://cars.av.by/renault/kaptur Kaptur 171 True
+https://cars.av.by/renault/koleos Koleos 55 True
+https://cars.av.by/renault/laguna Laguna 483 True
+https://cars.av.by/renault/latitude Latitude 10 True
+https://cars.av.by/renault/lodgy Lodgy 3 True
+https://cars.av.by/renault/logan Logan 216 True
+https://cars.av.by/renault/logan-stepway Logan Stepway 57 True
+https://cars.av.by/renault/megane Megane 701 True
+https://cars.av.by/renault/modus Modus 13 True
+https://cars.av.by/renault/rapid Rapid 3 True
+https://cars.av.by/renault/safrane Safrane 69 True
+https://cars.av.by/renault/sandero Sandero 57 True
+https://cars.av.by/renault/sandero-stepway Sandero Stepway 191 True
+https://cars.av.by/renault/scenic Scenic 606 True
+https://cars.av.by/renault/scenic-rx4 Scenic RX4 7 True
+https://cars.av.by/renault/scenic-xmod Scenic XMOD 8 True
+https://cars.av.by/renault/symbol Symbol 12 True
+https://cars.av.by/renault/talisman Talisman 163 True
+https://cars.av.by/renault/thalia Thalia 1 True
+https://cars.av.by/renault/trafic Trafic 62 True
+https://cars.av.by/renault/twingo Twingo 23 True
+https://cars.av.by/renault/vel-satis Vel Satis 24 True
+https://cars.av.by/renault/zoe ZOE 12 True

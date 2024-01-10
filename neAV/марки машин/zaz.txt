@@ -1,0 +1,9 @@
+https://cars.av.by/zaz/1102-tavriya 1102 Таврия 15 True
+https://cars.av.by/zaz/1103-slavuta 1103 Slavuta 3 True
+https://cars.av.by/zaz/965 965 5 True
+https://cars.av.by/zaz/968 968 13 True
+https://cars.av.by/zaz/chance Chance 1 True
+https://cars.av.by/zaz/forza Forza 4 True
+https://cars.av.by/zaz/lanos Lanos 1 True
+https://cars.av.by/zaz/sens Sens 5 True
+https://cars.av.by/zaz/vida Vida 1 True

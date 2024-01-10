@@ -1,0 +1,10 @@
+https://cars.av.by/lincoln/aviator Aviator 7 True
+https://cars.av.by/lincoln/continental Continental 2 True
+https://cars.av.by/lincoln/corsair Corsair 15 True
+https://cars.av.by/lincoln/mark-viii Mark VIII 1 True
+https://cars.av.by/lincoln/mkc MKC 14 True
+https://cars.av.by/lincoln/mkx MKX 3 True
+https://cars.av.by/lincoln/mkz MKZ 19 True
+https://cars.av.by/lincoln/nautilus Nautilus 19 True
+https://cars.av.by/lincoln/navigator Navigator 8 True
+https://cars.av.by/lincoln/town-car Town Car 9 True

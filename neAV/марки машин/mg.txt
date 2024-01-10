@@ -1,0 +1,5 @@
+https://cars.av.by/mg/3 3 5 True
+https://cars.av.by/mg/350 350 2 True
+https://cars.av.by/mg/550 550 2 True
+https://cars.av.by/mg/6 6 1 True
+https://cars.av.by/mg/zs ZS 2 True

@@ -1,0 +1,29 @@
+https://cars.av.by/volvo/240-series 240 series 1 True
+https://cars.av.by/volvo/300-series 300 series 1 True
+https://cars.av.by/volvo/440 440 14 True
+https://cars.av.by/volvo/460 460 17 True
+https://cars.av.by/volvo/480 480 1 True
+https://cars.av.by/volvo/740 740 13 True
+https://cars.av.by/volvo/850 850 16 True
+https://cars.av.by/volvo/940 940 9 True
+https://cars.av.by/volvo/960 960 5 True
+https://cars.av.by/volvo/c30 C30 8 True
+https://cars.av.by/volvo/c40 C40 2 True
+https://cars.av.by/volvo/c70 C70 6 True
+https://cars.av.by/volvo/s40 S40 68 True
+https://cars.av.by/volvo/s60 S60 180 True
+https://cars.av.by/volvo/s70 S70 18 True
+https://cars.av.by/volvo/s80 S80 152 True
+https://cars.av.by/volvo/s90 S90 40 True
+https://cars.av.by/volvo/v40 V40 56 True
+https://cars.av.by/volvo/v40-cross-country V40 Cross Country 23 True
+https://cars.av.by/volvo/v50 V50 57 True
+https://cars.av.by/volvo/v60 V60 138 True
+https://cars.av.by/volvo/v60-cross-country V60 Cross Country 24 True
+https://cars.av.by/volvo/v70 V70 103 True
+https://cars.av.by/volvo/v90 V90 43 True
+https://cars.av.by/volvo/v90-cross-country V90 Cross Country 46 True
+https://cars.av.by/volvo/xc40 XC40 43 True
+https://cars.av.by/volvo/xc60 XC60 323 True
+https://cars.av.by/volvo/xc70 XC70 63 True
+https://cars.av.by/volvo/xc90 XC90 333 True
