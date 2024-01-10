@@ -1,4 +1,5 @@
 from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 #from django.contrib.auth import get_user_model
 #User = get_user_model()
@@ -10,13 +11,13 @@ from django.db import models
 
 
 
-class MyUser(AbstractBaseUser):
+class MyUser(AbstractUser):
     # date_of_birth = models.DateField()
     # height = models.FloatField()
-    name = models.CharField(verbose_name='Имя', max_length=60)
-    login = models.CharField(verbose_name='Логин', max_length=30)
-    password = models.CharField(verbose_name='Пароль', max_length=20)
-    REQUIRED_FIELDS = ["name", "login", "password"]
+    username = models.CharField(verbose_name='Логин', max_length=60, default='', unique=True)
+    # login = models.CharField(verbose_name='Логин', max_length=30, default='')
+    password = models.CharField(verbose_name='Пароль', max_length=20, default='')
+    REQUIRED_FIELDS = ["password"]
 
 
 
@@ -64,7 +65,8 @@ class Car(models.Model):
     price = models.IntegerField(verbose_name='Цена', choices=PRICES, default=1)
 
     mileage = models.IntegerField(verbose_name='Пробег', default=1)
-    SALON_COLORS = (
+
+    SALON_MATERIALS = (
         (1, 'Искусственная кожа'),
         (2, 'Натуральная кожа'),
         (3, 'Ткань'),
@@ -72,14 +74,9 @@ class Car(models.Model):
         (5, 'Алькантара'),
         (6, 'Комбинированные материалы')
     )
-    salon_color = models.IntegerField(verbose_name='Цвет салона', choices=SALON_COLORS, default=1)
-
-    SALON_MATERIALS = (
-        (1, 'Полный привод'),
-        (2, 'Передний привод'),
-        (3, 'Задний привод')
-    )
     salon_material = models.IntegerField(verbose_name='Материал салона', choices=SALON_MATERIALS, default=1)
+
+
     user = models.ForeignKey(MyUser, verbose_name='Пользователь', on_delete=models.CASCADE)
     # так как эта модель может быть переопределена, то нужно наследователь эту модель из джанги
 
