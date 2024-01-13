@@ -28,8 +28,8 @@ const CarList = () => {
     <div>
       <h2>Список автомобилей</h2>
       <ul>
-        {cars.map((car, index) => (
-          <li key={car.id || index}>
+        {cars.map((car) => (
+          <li key={car.id}>
             <p>Марка авто: {car.brand}</p>
             <p>Модель авто: {car.model}</p>
             <p>Цвет авто: {car.color}</p>
