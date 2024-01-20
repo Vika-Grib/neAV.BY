@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useCookies } from 'react-cookie';
+import { useNavigate } from 'react-router-dom';
 
-
+function GetCSRFToken() {
+  const [cookies, setCookie] = useCookies(['csrftoken']);
+  console.log(cookies)
+  return cookies;
+ };
 
 const AuthComponent = () => {
+     const navigate = useNavigate();
      const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh', // Высота вьюпорта
+    height: '100vh',
     borderRadius: '8px',
   };
 
@@ -27,7 +34,11 @@ const AuthComponent = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
+    'X-CSRFToken': GetCSRFToken().csrftoken,
+//     'X-CSRF-Token': cookie.load('csrftoken'),
   });
+  console.log(formData)
+
 
   const handleChange = (e) => {
     setFormData({
@@ -40,19 +51,37 @@ const AuthComponent = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/users/', formData);
+      console.log(formData)
+      const response = await axios.post('./login/', formData, {
+        headers: {
+        'X-CSRFToken': formData['X-CSRFToken'],
+        },
+      });
       console.log('Login success:', response.data);
+
+      // После успешной авторизации перенаправляем пользователя
+      navigate('/api/v1/mainapp/car/advert/create');
+
     } catch (error) {
       console.error('Login error:', error);
     }
   };
 
+
   const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/users/', formData);
+      const response = await axios.post('./register/', formData, {
+        headers: {
+        'X-CSRFToken': formData['X-CSRFToken'],
+        },
+      });
       console.log('Registration success:', response.data);
+
+      // После успешной регистрации перенаправляем пользователя
+      navigate('/api/v1/mainapp/car/advert/create');
+
     } catch (error) {
       console.error('Registration error:', error);
     }
@@ -77,6 +106,12 @@ const AuthComponent = () => {
             Пожалуйста, введите пароль.
           </div>
         </div>
+
+        <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="rememberMe"/>
+        <label class="form-check-label" for="rememberMe">Запомнить меня</label>
+        </div>
+        < br/>
         <button type="button" class="btn btn-outline-info" onClick={handleLogin} style={{ marginRight: '10px' }}>Войти</button>
         <button type="button" class="btn btn-outline-secondary" onClick={handleRegister}>Зарегистрироваться</button>
       </form>

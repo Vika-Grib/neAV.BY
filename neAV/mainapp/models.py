@@ -16,6 +16,7 @@ class MyUser(AbstractUser):
     # height = models.FloatField()
     username = models.CharField(verbose_name='Логин', max_length=60, default='', unique=True)
     # login = models.CharField(verbose_name='Логин', max_length=30, default='')
+    # token = models.CharField(verbose_name='Токен', max_length=100, default='', editable=False)
     password = models.CharField(verbose_name='Пароль', max_length=20, default='')
     REQUIRED_FIELDS = ["password"]
 
@@ -25,15 +26,16 @@ class Car(models.Model):
     vin = models.CharField(verbose_name='Vin-номер', db_index=True, unique=True, max_length=64)
     color = models.CharField(verbose_name='Цвет', max_length=64, default='')
     brand = models.CharField(verbose_name='Марка', max_length=64, default='')
+    model = models.CharField(verbose_name='Модель', max_length=64, default='')
     CAR_TYPES = (
-        (1, 'Седан'),
-        (2, 'Хэчбек'),
-        (3, 'Универсал'),
-        (4, 'Купе'),
-        (5, 'Лифтбек'),
-        (6, 'Кабриолет')
+        ('1', 'Седан'),
+        ('2', 'Хэчбек'),
+        ('3', 'Универсал'),
+        ('4', 'Купе'),
+        ('5', 'Лифтбек'),
+        ('6', 'Кабриолет')
     )
-    car_type = models.IntegerField(verbose_name='Тип машины', choices=CAR_TYPES, default=1)
+    car_type = models.CharField(verbose_name='Тип машины', choices=CAR_TYPES, default='1', max_length=5)
     # photo = models.ManyToManyField(Photo, related_name='photos', blank=False)
 
     photo = models.ImageField(verbose_name='Фото', blank=True, upload_to='photos/')
@@ -43,26 +45,27 @@ class Car(models.Model):
         (2, 'Механика'),
         (3, 'Автомат')
     )
-    transmission = models.IntegerField(verbose_name='Коробка передач', choices=CAR_TRANSMISSION, default=1)
+    transmission = models.CharField(verbose_name='Коробка передач', choices=CAR_TRANSMISSION, default='1', max_length=10)
     ENGINE_TYPES = (
         (1, 'Дизель'),
         (2, 'Бензин'),
-        (3, 'Бензин (пропан-бутан'),
+        (3, 'Бензин (пропан-бутан)'),
         (4, 'Бензин (бутан)')
     )
-    engine_type = models.IntegerField(verbose_name='Тип двигателя', choices=ENGINE_TYPES, default=1)
+    engine_type = models.CharField(verbose_name='Тип двигателя', choices=ENGINE_TYPES, default='1', max_length=10)
     DRIVE_UNITS = (
         (1, 'Полный привод'),
         (2, 'Передний привод'),
         (3, 'Задний привод')
     )
-    drive_unit = models.IntegerField(verbose_name='Привод', choices=DRIVE_UNITS, default=1)
+    drive_unit = models.CharField(verbose_name='Привод', choices=DRIVE_UNITS, default='1', max_length=5)
     description = models.CharField(verbose_name='Описание', max_length=1000, default='')
     PRICES = (
-        (1, 'USD'),
-        (2, 'BYN')
+        ('1', 'USD'),
+        ('2', 'BYN')
     )
-    price = models.IntegerField(verbose_name='Цена', choices=PRICES, default=1)
+    price_type = models.CharField(verbose_name='Цена', choices=PRICES, default='1', max_length=5)
+    price = models.IntegerField(verbose_name='Цена', default=1)
 
     mileage = models.IntegerField(verbose_name='Пробег', default=1)
 
@@ -74,7 +77,7 @@ class Car(models.Model):
         (5, 'Алькантара'),
         (6, 'Комбинированные материалы')
     )
-    salon_material = models.IntegerField(verbose_name='Материал салона', choices=SALON_MATERIALS, default=1)
+    salon_material = models.CharField(verbose_name='Материал салона', choices=SALON_MATERIALS, default='1', max_length=10)
 
 
     user = models.ForeignKey(MyUser, verbose_name='Пользователь', on_delete=models.CASCADE)
@@ -83,16 +86,14 @@ class Car(models.Model):
 
 class Advertisment(Car):
     AD_TYPES = (
-        (1, 'Легковой автомобиль'),
-        (2, 'Грузовик или фургон'),
-        (3, 'Мототехника'),
-        (4, 'Спецтехника'),
-        (5, 'С/х техника'),
-        (6, 'Водный транспорт'),
+        ('1', 'Легковой автомобиль'),
+        ('2', 'Грузовик или фургон'),
+        ('3', 'Мототехника'),
+        ('4', 'Спецтехника'),
+        ('5', 'С/х техника'),
+        ('6', 'Водный транспорт'),
     )
-    advert_type = models.IntegerField(verbose_name='Тип транспорта', choices=AD_TYPES)
-
-
+    advert_type = models.CharField(verbose_name='Тип транспорта', choices=AD_TYPES, max_length=5, default='1')
 
 
 class Equipment(models.Model):

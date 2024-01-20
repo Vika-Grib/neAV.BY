@@ -34,4 +34,3 @@ urlpatterns = [
 # api/v1/mainapp/car/advert/ тут все объявления машин
 # api/v1/mainapp/car/advert/create/
 # api/users/
-# api/v1/mainapp/users/create/

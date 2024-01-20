@@ -11,6 +11,7 @@ const bannerStyle = {
   width: '100%',
 };
 
+
 export default function App() {
     const appStyle = {
     marginTop: '0px',      // Отступ сверху
@@ -34,7 +35,8 @@ export default function App() {
         {/* <Link to="/api/v1/mainapp/all/">Список автомобилей</Link> */}
         <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Создать объявление</Link>
         <Link to="/api/v1/mainapp/car/advert/" >Все объявления</Link>
-        <Link to="/api/users/">Авторизоваться</Link>
+        <Link to="/api/auth/">Авторизоваться</Link>
+        <Link to="/api/auth/logout/">Выйти</Link>
     </nav>
 
     <Routes>
@@ -43,7 +45,8 @@ export default function App() {
         <Route path="/api/v1/mainapp/car/advert/create/" element={<CarAdvertCreate />} />
         <Route path="/api/v1/mainapp/car/advert/" element={<CarAdvertList />} />
         <Route path="/api/v1/mainapp/car/advert/:id" element={<CarAdvertDetail />} />
-        <Route path="/api/users/" element={<AuthComponent />} />
+        <Route path="/api/auth/" element={<AuthComponent />} />
+        <Route path="/api/auth/logout" element={<AuthComponent />} />
     </Routes>
 
     </div>

@@ -43,7 +43,12 @@ INSTALLED_APPS = [
     'djoser',
     'drf_yasg',
     'corsheaders',
+    'knox',
 ]
+
+CSRF_COOKIE_HTTPONLY = False
+SESSION_COOKIE_HTTPONLY = False
+CSRF_TRUSTED_ORIGINS = ['https://*.127.0.0.1', 'http://localhost:8000/']
 
 AUTH_USER_MODEL = 'mainapp.MyUser'
 

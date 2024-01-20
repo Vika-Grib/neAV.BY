@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Advertisment
+from .models import Advertisment, MyUser
 
 
 # Register your models here.
@@ -9,4 +9,9 @@ class AdvertismentAdmin(admin.ModelAdmin):
     # list_editable = ('advert_type', )
     list_filter = ('advert_type', )
 
+class MyUserAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(Advertisment, AdvertismentAdmin)
+admin.site.register(MyUser, MyUserAdmin)
+
