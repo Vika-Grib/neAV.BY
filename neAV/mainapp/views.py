@@ -10,10 +10,11 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.authtoken.serializers import AuthTokenSerializer
-from .models import Car, Advertisment, MyUser
+from .models import Car, Advertisment, MyUser, UsedAuto
 from .serializers import GroupSerializer, UserSerializer, CarDetailSerializer, CarListView, CarAdvertismentSerializer, \
-    UserCreateSerializer
+    UserCreateSerializer, UsedCarListView
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.authentication import TokenAuthentication, SessionAuthentication
 
@@ -95,12 +96,18 @@ class CarCreateView(ModelViewSet):
     permission_classes = [permissions.AllowAny, ]
 
 # чтобы посмотреть все объекты в базе данных
-class CarListView(generics.ListAPIView):
+class CarListView1(generics.ListAPIView):
     serializer_class = CarListView
     queryset = Car.objects.all()
     # ListAPIView обязательно принимает queryset - какие записи вынуть из БД
     # permission_classes = [permissions.AllowAny, ] # если нужно, чтобы просматривать должен только авторизованный
 # просмотр конкретной записи, редактирование, удаление
+
+
+class CarListUsed(ModelViewSet):
+    serializer_class = UsedCarListView
+    queryset = UsedAuto.objects.all()
+
 
 class CarDetailView(ModelViewSet): # RetrieveUpdateDestroyAPIView - метод позволяет редактировать, удалять и получать данные об одном объекте
     serializer_class = CarDetailSerializer # CarDetailSerializer - указываем его, потому что нужны все поля
@@ -113,6 +120,8 @@ class CarAdvertisment(ModelViewSet):
     serializer_class = CarAdvertismentSerializer
     queryset = Advertisment.objects.all()
     # permission_classes = [UserPermission, ]
+    parser_classes = (MultiPartParser, FormParser) # для фото
+
 
 
 # class AdvertCreateView(generics.CreateAPIView):

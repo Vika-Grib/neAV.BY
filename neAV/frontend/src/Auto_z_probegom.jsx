@@ -9,7 +9,7 @@ const CarAdvertList = () => {
   useEffect(() => {
     const fetchAdverts = async () => {
       try {
-        const response = await axios.get('/api/v1/mainapp/car/advert/');
+        const response = await axios.get('/api/v1/mainapp/car/used/');
         setAdverts(response.data.results);
       } catch (error) {
         console.error('Ошибка при получении списка объявлений', error);
@@ -39,7 +39,7 @@ const CarAdvertList = () => {
                 <br />
               </div>
             )}
-            <p style={infoStyle}>Марка авто: {advert.brand}</p>
+            <p style={infoStyle}>{advert.name}</p>
             <p style={infoStyle}>Модель авто: {advert.model}</p>
             <p style={infoStyle}>Цвет авто: {advert.color}</p>
 

@@ -8,14 +8,18 @@ router = routers.DefaultRouter()
 router.register('advert', CarAdvertisment)
 router.register('detail', CarDetailView)
 router.register('create', CarCreateView)
+router.register('used', CarListUsed)
+# http://127.0.0.1:8000/api/v1/mainapp/car/used/
+
+
 # urlpatterns += router.urls
 
 
 urlpatterns = [
     # path('', include(router.urls)),
     # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('all/', CarListView.as_view()),
-    path('car/', include(router.urls))
+    path('all/', CarListView1.as_view()),
+    path('car/', include(router.urls)),
     # path('car/advert/create/', AdvertCreateView.as_view()),
     # path('users/all/', UserView.as_view()),
     # path('users/create/', UserCreateView.as_view())

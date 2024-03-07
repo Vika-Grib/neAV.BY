@@ -1,7 +1,7 @@
 from django.contrib.auth.models import Group
 from knox.models import AuthToken
 from rest_framework import serializers
-from .models import Car, Advertisment, MyUser
+from .models import Car, Advertisment, MyUser, UsedAuto
 
 # user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
@@ -48,9 +48,15 @@ class CarListView(serializers.ModelSerializer):
         model = Car
         fields = ('brand', 'model', 'color', 'car_type', 'car_year', 'price')
 
+class UsedCarListView(serializers.ModelSerializer):
+    class Meta:
+        model = UsedAuto
+        fields = '__all__'
+
 
 class CarAdvertismentSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    photo = serializers.ImageField(required=False)
     class Meta:
         model = Advertisment
         fields = '__all__'

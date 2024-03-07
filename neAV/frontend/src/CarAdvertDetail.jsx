@@ -26,10 +26,33 @@ const CarAdvertDetail = () => {
   return (
     <div>
       <h2>Информация об объявлении</h2>
+
+      {/* Другие поля информации об объявлении */}
+      {advert.photo && (
+              <div>
+                <img
+                  src={`${advert.photo}`}
+//                   alt={`${advert.brand} ${advert.model}`}
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+                <br />
+              </div>
+            )}
       <p>Марка авто: {advert.brand}</p>
+      <p>Описание авто: {advert.description}</p>
       <p>Модель авто: {advert.model}</p>
       <p>Цвет авто: {advert.color}</p>
-      {/* Другие поля информации об объявлении */}
+      {advert.transmission===1 &&
+        <p>Коробка передач: Робот</p>}
+      {advert.transmission===2 &&
+        <p>Коробка передач: Механика</p>}
+      {advert.transmission===3 &&
+        <p>Коробка передач: Автомат</p>}
+      <p>Материал салона: {advert.salon_material}</p>
+      <p>Тип двигателя: {advert.engine_type}</p>
+      <p>Привод: {advert.drive_unit}</p>
+      <p>Пробег: {advert.mileage}</p>
+      <p>Цена: {advert.price} {advert.price_type}</p>
     </div>
   );
 };

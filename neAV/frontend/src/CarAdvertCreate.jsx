@@ -142,7 +142,7 @@ const CarAdvertCreate = ({ csrfToken }) => {
 
         <div className="mb-3 col-sm-6">
           <label htmlFor="photo" className="form-label">Фото авто:</label>
-          <input type="file" className="form-control" id="photo" name="photo" onChange={handlePhotoChange} accept="image/*" required />
+          <input type="file" className="form-control" id="photo" name="photo" onChange={handlePhotoChange} accept="image/*" />
           <div className="invalid-feedback">
             Пожалуйста, загрузите фото.
           </div>

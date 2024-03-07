@@ -59,8 +59,13 @@ const AuthComponent = () => {
       });
       console.log('Login success:', response.data);
 
+      // Application, sessionStorage - там можем посмотреть что мы залогинены
+      sessionStorage.setItem('status','loggedIn');
+
       // После успешной авторизации перенаправляем пользователя
       navigate('/api/v1/mainapp/car/advert/create');
+      // перезагрузка страницы
+      window.location.reload();
 
     } catch (error) {
       console.error('Login error:', error);

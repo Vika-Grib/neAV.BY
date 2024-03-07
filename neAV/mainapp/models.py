@@ -20,7 +20,8 @@ class MyUser(AbstractUser):
     password = models.CharField(verbose_name='Пароль', max_length=20, default='')
     REQUIRED_FIELDS = ["password"]
 
-
+def upload_to(instance, filename):
+    return 'photos/{filename}'.format(filename=filename)
 
 class Car(models.Model):
     vin = models.CharField(verbose_name='Vin-номер', db_index=True, unique=True, max_length=64)
@@ -38,7 +39,7 @@ class Car(models.Model):
     car_type = models.CharField(verbose_name='Тип машины', choices=CAR_TYPES, default='1', max_length=5)
     # photo = models.ManyToManyField(Photo, related_name='photos', blank=False)
 
-    photo = models.ImageField(verbose_name='Фото', blank=True, upload_to='photos/')
+    photo = models.ImageField(verbose_name='Фото', blank=True, upload_to=upload_to, null=True)
 
     CAR_TRANSMISSION = (
         (1, 'Робот'),
@@ -82,6 +83,24 @@ class Car(models.Model):
 
     user = models.ForeignKey(MyUser, verbose_name='Пользователь', on_delete=models.CASCADE)
     # так как эта модель может быть переопределена, то нужно наследователь эту модель из джанги
+
+class UsedAuto(models.Model):
+    name = models.CharField(max_length=64)
+    price_for_bel_rub = models.CharField(max_length=64)
+    price_for_usd = models.CharField(max_length=64)
+    photo = models.CharField(max_length=64)
+    year = models.CharField(max_length=64)
+    kpp = models.CharField(max_length=64)
+    volume = models.CharField(max_length=64)
+    type_engine = models.CharField(max_length=64)
+    probeg = models.CharField(max_length=64)
+    kyzov = models.CharField(max_length=64)
+    privod = models.CharField(max_length=64)
+    color = models.CharField(max_length=64)
+    power = models.CharField(max_length=64)
+    comment = models.CharField(max_length=64)
+    addcat_id = models.CharField(default='1', max_length=64)
+
 
 
 class Advertisment(Car):
@@ -165,16 +184,28 @@ class Advertisment_parts(models.Model):
 
 class Light_Car(Advertisment):
     CAR_MARKS = (
-        (1, 'Alfa Romeo'),
-        (2, 'Audi'),
-        (3, 'BMW'),
-        (4, 'Chevrolet'),
-        (5, 'Chrysler'),
-        (6, 'Citroen'),
-        (7, 'Dodge'),
-        (8, 'Fiat')
+        ('1', 'Alfa Romeo'),
+        ('2', 'Audi'),
+        ('3', 'BMW'),
+        ('4', 'Chevrolet'),
+        ('5', 'Chrysler'),
+        ('6', 'Citroen'),
+        ('7', 'Dodge'),
+        ('8', 'Fiat')
     )
-    light_car_type = models.IntegerField(verbose_name='Тип транспорта', choices=CAR_MARKS)
+    light_car_type = models.CharField(verbose_name='Легковые автомобили', choices=CAR_MARKS, max_length=20)
+
+class Moto(Advertisment):
+    MOTO_MARKS = (
+        ('1', 'Appollo'),
+        ('2', 'Aprilia'),
+        ('3', 'BMW'),
+        ('4', 'BRP'),
+        ('5', 'CFMOTO'),
+        ('6', 'Ducati')
+    )
+    moto_type = models.CharField(verbose_name='Мототехника', choices=MOTO_MARKS, max_length=20)
+
 
 class Car_Models(models.Model):
     CAR_MODELS = ()
