@@ -8,6 +8,7 @@ import CarAdvertDetail from './CarAdvertDetail';
 import AuthComponent from './AuthComponent';
 import profile_photo from './noneuser.png';
 import Auto_z_probegom from './Auto_z_probegom';
+import Auto_z_prob_detail from './Auto_z_prob_detail';
 
 
 const bannerStyle = {
@@ -50,7 +51,7 @@ export default function App() {
     <nav style={navStyle}>
         {/* <Link to="/api/v1/mainapp/all/">Список автомобилей</Link> */}
         <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Создать объявление</Link>
-        <Link to="/api/v1/mainapp/car/advert/" >Все объявления</Link>
+        <Link to="/api/v1/mainapp/car/advert/" >Все добавленные мной объявления</Link>
         <Link to="/api/v1/mainapp/car/used/" >Авто с пробегом</Link>
 
 
@@ -69,6 +70,7 @@ export default function App() {
         <Route path="/api/v1/mainapp/car/advert/" element={<CarAdvertList />} />
         <Route path="/api/v1/mainapp/car/advert/:id" element={<CarAdvertDetail />} />
         <Route path="/api/v1/mainapp/car/used" element={<Auto_z_probegom />} />
+        <Route path="/api/v1/mainapp/car/used/:id" element={<Auto_z_prob_detail />} />
         <Route path="/api/auth/logout" element={<CarAdvertList />} />
     </Routes>
 

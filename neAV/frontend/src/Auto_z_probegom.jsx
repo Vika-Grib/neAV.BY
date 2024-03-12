@@ -57,7 +57,7 @@ const CarAdvertList = () => {
             <p style={infoStyle}>Цвет авто: {advert.color}</p>
             <p style={infoStyle}>Пробег авто: {advert.probeg}</p>
 
-            <Link to={`/api/v1/mainapp/car/advert/${advert.id}`} style={linkStyle}>Подробнее</Link>
+            <Link to={`/api/v1/mainapp/car/used/${advert.id}`} style={linkStyle}>Подробнее</Link>
           </div>
         ))}
       </div>
