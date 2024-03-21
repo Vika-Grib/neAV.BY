@@ -1,6 +1,7 @@
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from datetime import datetime
 #from django.contrib.auth import get_user_model
 #User = get_user_model()
 
@@ -18,10 +19,34 @@ class MyUser(AbstractUser):
     # login = models.CharField(verbose_name='Логин', max_length=30, default='')
     # token = models.CharField(verbose_name='Токен', max_length=100, default='', editable=False)
     password = models.CharField(verbose_name='Пароль', max_length=20, default='')
+
+    is_telegram_use = models.BooleanField(blank=True, default=False, verbose_name="Telegram привязан")
+    telegram_id = models.CharField(max_length=12, blank=True, default="", verbose_name="Telegram id")
+
     REQUIRED_FIELDS = ["password"]
+
 
 def upload_to(instance, filename):
     return 'photos/{filename}'.format(filename=filename)
+
+
+class AdminMessaging(models.Model):
+    pass
+
+
+class Message(models.Model):
+    text = models.TextField(verbose_name="Текст сообщения")
+    date_time = models.DateTimeField(verbose_name="Дата отправки", default=datetime.now(), blank=True, null=True)
+    message_id = models.CharField(max_length=100, verbose_name="id сообщения", default="", blank=True)
+    status = models.BooleanField(verbose_name="Статус отправки", default=True)
+
+    def __str__(self):
+        return f"[{self.date_time}] {self.text[:50]}"
+
+    class Meta:
+        verbose_name = "Сообщение в telegram"
+        verbose_name_plural = "Сообщения в telegram"
+
 
 class Car(models.Model):
     vin = models.CharField(verbose_name='Vin-номер', db_index=True, unique=True, max_length=64)

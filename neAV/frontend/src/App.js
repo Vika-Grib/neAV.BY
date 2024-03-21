@@ -106,6 +106,7 @@ export default function App() {
         <Route path="/api/v1/mainapp/car/advert/:id" element={<CarAdvertDetail />} />
         <Route path="/api/auth/" element={<AuthComponent />} />
         <Route path="/api/v1/mainapp/car/used" element={<Auto_z_probegom />} />
+        <Route path="/api/v1/mainapp/car/used/:id" element={<Auto_z_prob_detail />} />
     </Routes>
 
     </div>

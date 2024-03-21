@@ -20,6 +20,7 @@ urlpatterns = [
     # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('all/', CarListView1.as_view()),
     path('car/', include(router.urls)),
+    path('send_tg_message/', send_tg_message, name='send_tg_message'),
     # path('car/advert/create/', AdvertCreateView.as_view()),
     # path('users/all/', UserView.as_view()),
     # path('users/create/', UserCreateView.as_view())

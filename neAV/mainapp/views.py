@@ -1,7 +1,11 @@
+from datetime import datetime
+from django.contrib import messages
 from django.contrib.auth import login
 from django.db import models
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.models import Group
+from django.urls import reverse
 from knox.models import AuthToken
 from knox.views import LoginView
 from rest_framework import permissions, viewsets, generics
@@ -17,7 +21,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.authentication import TokenAuthentication, SessionAuthentication
-
+from .send_tg_messages import *
 
 class UserView(ModelViewSet):
     """
@@ -40,6 +44,31 @@ class UserCreateView(generics.GenericAPIView):
             'user': UserSerializer(user, context=self.get_serializer_context()).data, # context=self.get_serializer_context()) - все поля, содержание информации которое мы могли не видеть
             'token':  AuthToken.objects.create(user)[1]
         })
+
+def send_tg_message(request):
+    selected_items = request.session.get('users')
+    if request.method == 'POST':
+        date = request.POST.get('date')
+        # formated_data = date.replace("T", " ")
+        datetime_object = datetime.strptime(date, "%Y-%m-%dT%H:%M") if date else None
+
+        text = request.POST.get('text')
+
+        # получаем telegram_id выбранных пользаков
+        telegram_ids = [item['telegram_id'] for item in selected_items]
+        # срезаем тех, кто не привязал телегу (без telegram_id)
+        filtered_tg_ids = list(filter(None, telegram_ids))
+
+        # передаём в планировщик
+        send_tg_msg(filtered_tg_ids, text, datetime_object)
+
+        # Очищаем сессию
+        request.session['selected_items'] = None
+        # Добавляем уведомление об успехе на страницу админки
+        messages.success(request, f'Сообщение добавлено в очередь отправки')
+        # Возвращаемся на страницу админки с пользователями
+        return HttpResponseRedirect('http://127.0.0.1:8000/admin/mainapp/myuser/')
+    return render(request, 'admin/send_message.html')
 
 
 class LoginAPI(LoginView):
