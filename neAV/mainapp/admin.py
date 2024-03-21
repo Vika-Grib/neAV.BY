@@ -68,7 +68,7 @@ class MessageAdmin(admin.ModelAdmin):
     def short_text(self, obj):
         return obj.text[:100]
     short_text.short_description = "Сокращённый текст"
-    # todo - добавить действие отправки отложенных рассылок сейчас
+
 
 async def broadcast(text, recipients):
     api_token = '6724758298:AAGsEf6wbprcz1KhH_eMeft9RPr9i0UbBJs'
