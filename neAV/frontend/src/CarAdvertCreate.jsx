@@ -3,39 +3,6 @@ import axios from 'axios';
 // import fs from 'fs';
 import { useCookies } from 'react-cookie';
 
-
-// function SelectParameters(select_id) {
-//   axios.get('../car_marks/audi.txt')
-//     .then(response => {
-//       console.log(response.data);
-//     })
-//     .catch(error => {
-//       console.error('Ошибка при чтении файла', error);
-//     });
-// }
-// SelectParameters('audi.txt');
-
-
-// function SelectParameters(select_id) {
-//   var fs = require('fs');
-//   var select_elem = document.getElementById(select_id);
-//   console.log(select_elem)
-// //   var dir = fs.readdir('../car_marks/');
-// //         console.log(dir)
-// //   fs.readFile('../car_marks/audi.txt', (err, data) => {
-// //       if (err) throw err;
-// //       console.log(data);
-//   var file = fs.readFile('../car_marks/audi.txt', 'utf8', (err, data) => {
-//     if (err) throw err;
-//     console.log(data);
-//  });
-//  };
-// SelectParameters('audi.txt');
-
-//   var list = document.createElement('option');
-//   list.innerHTML = "";
-
-
 function GetCSRFToken() {
   const [cookies, setCookie] = useCookies(['csrftoken']);
   console.log(cookies)

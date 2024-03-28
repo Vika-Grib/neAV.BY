@@ -37,6 +37,7 @@ export default function App() {
     padding: '20px',        // Внутренний отступ для содержимого
   };
 
+
     if (sessionStorage.getItem('status') == 'loggedIn'){
         return (
   <Router>

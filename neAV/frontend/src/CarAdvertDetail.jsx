@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
+
+
+
 const CarAdvertDetail = () => {
   const { id } = useParams();
   const [advert, setAdvert] = useState(null);

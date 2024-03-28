@@ -53,9 +53,9 @@ urlpatterns = [
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-    path('api/auth/register/', UserCreateView.as_view(), name='register'),
-    path('api/auth/login/', LoginAPI.as_view(), name='login'),
-    path('api/auth/logout/', knox_views.LogoutView.as_view(), name='logout'),
+    path('api/auth/register/', UserCreateView.as_view(), name='register'), # эндпойнт для регистрации новых.
+    path('api/auth/login/', LoginAPI.as_view(), name='login'),  # эндпойнт для входа пользователя.
+    path('api/auth/logout/', knox_views.LogoutView.as_view(), name='logout'), # эндпойнт Для выхода пользователя.
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # http://127.0.0.1:8000/swagger/

@@ -16,7 +16,6 @@ router.register('used', CarListUsed)
 
 
 urlpatterns = [
-    # path('', include(router.urls)),
     # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('all/', CarListView1.as_view()),
     path('car/', include(router.urls)),
@@ -24,6 +23,11 @@ urlpatterns = [
     # path('car/advert/create/', AdvertCreateView.as_view()),
     # path('users/all/', UserView.as_view()),
     # path('users/create/', UserCreateView.as_view())
+]
+
+# Добавляем маршруты для аутентификации и регистрации пользователей
+urlpatterns += [
+    path('api/', include('djoser.urls')),
 ]
 
 # app_name = 'car'
