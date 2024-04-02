@@ -1,17 +1,7 @@
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
-import {
-  enablePromise,
-  openDatabase,
-} from "react-native-sqlite-storage"
 import React, {FC, ReactElement, useEffect, useState} from 'react';
-import Parse from 'parse';
-
-
-
-// Enable promise for SQLite
-enablePromise(true)
 
 
 function GetCSRFToken() {
@@ -19,19 +9,6 @@ function GetCSRFToken() {
   console.log(cookies)
   return cookies;
  };
-
-
-export const connectToDatabase = async () => {
-  return openDatabase(
-    { name: "db.sqlite3", location: "default" },
-    () => {},
-    (error) => {
-      console.error(error)
-      throw Error("Could not connect to database")
-    }
-  )
-}
-
 
 
 const AuthComponent = () => {
@@ -54,32 +31,6 @@ const AuthComponent = () => {
   marginTop: '-340px',
 };
 
-  const [username, setUsername] = useState('');
-  // useEffect is called after the component is initially rendered and
-  // after every other render
-  useEffect(() => {
-    // Since the async method Parse.User.currentAsync is needed to
-    // retrieve the current user data, you need to declare an async
-    // function here and call it afterwards
-    async function getCurrentUser() {
-      // This condition ensures that username is updated only if needed
-      if (username === '') {
-        const currentUser = await Parse.User.currentAsync();
-        if (currentUser !== null) {
-          setUsername(currentUser.getUsername());
-        }
-      }
-    }
-    getCurrentUser();
-  }, [username]);
-
-
-  const GetTelegramID = async () => {
-    const TelegramQuery = `SELECT * FROM mainapp_myuser WHERE username='${username}'`;
-    // Далее можно использовать TelegramQuery для выполнения запроса к базе данных или других операций.
-    return TelegramQuery
-}
-
 
   const [formData, setFormData] = useState({
     username: '',
@@ -100,6 +51,7 @@ const AuthComponent = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
+
     try {
       console.log(formData)
       const response = await axios.post('./login/', formData, {
@@ -109,11 +61,8 @@ const AuthComponent = () => {
       });
       console.log('Login success:', response.data);
 
-
       try {
-            const db = await connectToDatabase()
-            const TelegramQuery = await GetTelegramID();
-            const telegram_id = await db.executeSql(TelegramQuery)
+            console.log(formData);
           } catch (error) {
             console.error(error)
             throw Error(`Failed to get telegram_id`)
@@ -121,14 +70,20 @@ const AuthComponent = () => {
 
       // Application, sessionStorage - там можем посмотреть что мы залогинены
      sessionStorage.setItem('status', 'loggedIn');
-     const telegramId = await GetTelegramID(); // Добавили await перед вызовом GetTelegramID
-     sessionStorage.setItem('telegram_id', telegramId); // Используем telegramId вместо вызова GetTelegramID()
+     sessionStorage.setItem('username', formData['username']);
+     const username = formData['username'];
+     const telegramIDResponse = await axios.get(`http://127.0.0.1:8000/api/v1/mainapp/get-telegram-id/?username=${username}`);
+     const telegramID = telegramIDResponse.data['telegramId']; // Получаем значение telegramID из ответа
+     sessionStorage.setItem('telegram_id', telegramID); // Сохраняем telegramID в sessionStorage
+     console.log(telegramIDResponse);
+     console.log(telegramID);
 
 
       // После успешной авторизации перенаправляем пользователя
       navigate('/api/v1/mainapp/car/advert/create');
       // перезагрузка страницы
       window.location.reload();
+
 
     } catch (error) {
       console.error('Login error:', error);

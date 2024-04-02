@@ -69,6 +69,33 @@ class MessageAdmin(admin.ModelAdmin):
         return obj.text[:100]
     short_text.short_description = "Сокращённый текст"
 
+@admin.register(ChatMessage)
+class ChatMessageAdmin(admin.ModelAdmin):
+    list_display = ('date_time', 'short_text', 'user_create', 'status', 'id')
+    search_fields = ('date_time', 'text', 'id')
+    readonly_fields = ('date_time', 'user_create')
+
+    # часть текста сообщения
+    def short_text(self, obj):
+        return obj.text[:100]
+
+    short_text.short_description = "Сокращённый текст"
+
+# инлайн-класс для удобного просмотра сообщений в чатах через админку
+class ChatMessageInline(admin.TabularInline):  # Или используйте StackedInline
+    model = Chat.messages.through
+    extra = 0
+    verbose_name = "Сообщение"
+    verbose_name_plural = "Сообщения"
+
+@admin.register(Chat)
+class ChatAdmin(admin.ModelAdmin):
+    list_display = ('id',)
+    search_fields = ('id', 'messages__text')
+    exclude = ('messages',)
+    readonly_fields = ('users',)
+    inlines = [ChatMessageInline]
+
 
 async def broadcast(text, recipients):
     api_token = '6724758298:AAGsEf6wbprcz1KhH_eMeft9RPr9i0UbBJs'

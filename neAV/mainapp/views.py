@@ -2,26 +2,45 @@ from datetime import datetime
 from django.contrib import messages
 from django.contrib.auth import login
 from django.db import models
+from django.db.models import Count
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.models import Group
 from django.urls import reverse
 from knox.models import AuthToken
 from knox.views import LoginView
-from rest_framework import permissions, viewsets, generics
+from rest_framework import permissions, viewsets, generics, status
 from rest_framework.generics import GenericAPIView
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.authtoken.serializers import AuthTokenSerializer
-from .models import Car, Advertisment, MyUser, UsedAuto
+from .models import Car, Advertisment, MyUser, UsedAuto, Chat, ChatMessage
 from .serializers import GroupSerializer, UserSerializer, CarDetailSerializer, CarListView, CarAdvertismentSerializer, \
-    UserCreateSerializer, UsedCarListView
+    UserCreateSerializer, UsedCarListView, ChatMessageCreateSerializer, ChatMessageUpdateSerializer, ChatSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.authentication import TokenAuthentication, SessionAuthentication
 from .send_tg_messages import *
+from django.http import JsonResponse
+from django.views.decorators.http import require_GET
+from .models import MyUser
+
+
+@require_GET
+def get_telegram_id(request):
+    username = request.GET.get('username', None)
+    if username is None:
+        return JsonResponse({'error': 'Username is required'}, status=400)
+
+    try:
+        user = MyUser.objects.get(username=username)
+        telegram_id = user.telegram_id
+        return JsonResponse({'telegramId': telegram_id})
+    except MyUser.DoesNotExist:
+        return JsonResponse({'error': 'User not found'}, status=404)
+
 
 class UserView(ModelViewSet):
     """
@@ -157,3 +176,67 @@ class CarAdvertisment(ModelViewSet):
 #     serializer_class = CarAdvertismentSerializer
 #     permission_classes = [UserPermission, ]
 
+
+#######################################################################
+# создать сообщение в чате или новый чат с сообщением (если чата ещё нет)
+class ChatMessageCreateView(generics.CreateAPIView):
+    # queryset = ChatMessage.objects.all()
+    # serializer_class = ChatMessageCreateSerializer
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        user_id = request.data.get('user_id')
+        message_text = request.data.get('text')
+
+        try:
+            user = MyUser.objects.get(id=user_id)
+        except MyUser.DoesNotExist:
+            return Response({"error": "Пользователь не найден"}, status=status.HTTP_404_NOT_FOUND)
+
+        chat = Chat.objects.filter(users__in=[self.request.user, user]).annotate(num_users=Count('users')).filter(
+            num_users=2).first()
+
+        if not chat:
+            chat = Chat.objects.create()
+            chat.users.add(self.request.user, user)
+
+        chat_message = ChatMessage.objects.create(
+            text=message_text,
+            user_create=self.request.user,
+        )
+
+        chat.messages.add(chat_message)
+
+        serializer = ChatMessageCreateSerializer(chat_message)
+        return Response({"info": "Сообщение создано",
+                         "message": serializer.data,
+                         "chat_id": chat.id,
+                         "users": [
+                             {
+                                 "id": f"{user.id}",
+                                 "username": f"{user.username}",
+                                 "photo": f"{request.build_absolute_uri(user.photo.url) if user.photo else None}"
+                             },
+                             {
+                                 "id": f"{self.request.user.id}",
+                                 "username": f"{self.request.user.username}",
+                                 "photo": f"{request.build_absolute_uri(self.request.user.photo.url) if self.request.user.photo else None}"
+                             }
+                         ]
+                         }, status=status.HTTP_201_CREATED)
+
+
+# получить список всех чатов текущего пользователя
+class ChatMessageRetrieveView(generics.ListAPIView):
+    serializer_class = ChatSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        return Chat.objects.filter(users=user)
+
+# обновить сообщение в чате
+class ChatMessageUpdateView(generics.RetrieveUpdateAPIView):
+    serializer_class = ChatMessageUpdateSerializer
+    permission_classes = [IsAuthenticated]
+    queryset = ChatMessage.objects.all()

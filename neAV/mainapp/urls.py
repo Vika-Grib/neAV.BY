@@ -16,20 +16,19 @@ router.register('used', CarListUsed)
 
 
 urlpatterns = [
-    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('all/', CarListView1.as_view()),
     path('car/', include(router.urls)),
     path('send_tg_message/', send_tg_message, name='send_tg_message'),
-    # path('car/advert/create/', AdvertCreateView.as_view()),
-    # path('users/all/', UserView.as_view()),
-    # path('users/create/', UserCreateView.as_view())
+
+    path('get-telegram-id/', get_telegram_id, name='get_telegram_id'),  # Измененный путь для API получения telegram_id
+    path('api/', include('djoser.urls')),  # Маршруты для аутентификации и регистрации пользователей
+
+    path('chat_message/create/', ChatMessageCreateView.as_view(), name='chat_message_create'),
+    path('chat_message/list/', ChatMessageRetrieveView.as_view(), name='chat_message_list_view'),
+    path('chat_message/update/<int:pk>', ChatMessageUpdateView.as_view(), name='chat_message_update_view'),
 ]
 
-# Добавляем маршруты для аутентификации и регистрации пользователей
-urlpatterns += [
-    path('api/', include('djoser.urls')),
-]
-
+# api/v1/mainapp/ chat_message/create/
 # app_name = 'car'
 # router = routers.DefaultRouter()
 # router.register(r'groups', views.GroupViewSet)
@@ -37,6 +36,7 @@ urlpatterns += [
 
 # подключаем API используя автоматическую маршрутизацию URL routing адресов
 # Также мы включаем login URLs доступный для просмотра API
+# api/v1/mainapp/get-telegram-id/
 # api/v1/mainapp/car/create/
 # api/v1/mainapp/all/
 # api/v1/mainapp/car/detail/4/

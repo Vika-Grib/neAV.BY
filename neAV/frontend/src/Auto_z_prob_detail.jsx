@@ -12,52 +12,58 @@ function GetCSRFToken() {
 
 
 const AutoZProbDetail = ({ csrfToken }) => {
+    const { id } = useParams();
+    const [advert, setAdvert] = useState(null);
+
+    const telegram_id = sessionStorage.getItem('telegram_id');
+    console.log(telegram_id);
     const [formData, setFormData] = useState({
-        sender_id: '',
-        reciever_id: '',
+        sender_id: telegram_id,
         'X-CSRFToken': GetCSRFToken().csrftoken,
         // Другие поля объявления
       });
-  const { id } = useParams();
-  const [advert, setAdvert] = useState(null);
-
 
 
   useEffect(() => {
     const fetchAdvert = async () => {
+      const telegram_id = sessionStorage.getItem('telegram_id');
       try {
         const response = await axios.get(`/api/v1/mainapp/car/used/${id}/`);
         setAdvert(response.data);
       } catch (error) {
-        console.error('Ошибка при получении сведений об автомобиле', error);
+         console.error('Ошибка 1 при получении сведений об автомобиле', error);
       }
 
        try {
-       const token = GetCSRFToken().csrftoken; // Получаем токен CSRF
-       // Проверяем, есть ли токен CSRF
-        if (!token) {
-          console.error('Токен CSRF отсутствует');
-          return;
-        }
+
        console.log(formData);
-      const response = await axios.post('/api/v1/mainapp/car/used/${id}/', formData,{
-        headers: {
-        'X-CSRFToken': formData['X-CSRFToken'],
-        'Content-Type': 'multipart/form-data',
-        },
-        withCredentials: true,
-      });
+
       // Обновляем состояние формы или выполняем другие действия по завершению запроса
-      setFormData({ sender_id: '', reciever_id: '', 'X-CSRFToken': token });
+      setFormData({ sender_id: telegram_id, 'X-CSRFToken': formData['X-CSRFToken'] });
     } catch (error) {
-        console.error('Ошибка при получении сведений об автомобиле', error);
-        // Добавляем уведомление об ошибке для пользователя
-        alert('Ошибка при отправке запроса');
+        console.error('Ошибка 2', error);
       }
       };
     fetchAdvert();
   }, [id]);
 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`/api/v1/mainapp/car/used/${id}/`, formData, {
+        headers: {
+          'X-CSRFToken': formData['X-CSRFToken'],
+          'Content-Type': 'multipart/form-data',
+        },
+        withCredentials: true,
+      });
+      console.log('Чат успешно создан:', response.data);
+    } catch (error) {
+      console.error('Ошибка при создании чата:', error);
+//       alert('Ошибка при создании чата');
+    }
+  };
 
 
   if (!advert) {
@@ -87,7 +93,7 @@ const AutoZProbDetail = ({ csrfToken }) => {
         <form method="POST" name="chat" action={`/api/v1/mainapp/car/used/${id}/`} id="usrform">
 
            <input type="text" name="sender_id" value={formData.sender_id} hidden></input>
-           <input type="text" name="reciever_id" value={formData.reciever_id} hidden></input>
+           <input type="text" name="reciever_id" value={advert.telegram_id} hidden></input>
            <button type="submit" className="btn_chat" >Написать продавцу</button>
        </form>
 

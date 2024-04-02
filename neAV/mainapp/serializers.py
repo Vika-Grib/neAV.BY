@@ -1,7 +1,8 @@
 from django.contrib.auth.models import Group
 from knox.models import AuthToken
 from rest_framework import serializers
-from .models import Car, Advertisment, MyUser, UsedAuto
+from .models import Car, Advertisment, MyUser, UsedAuto, ChatMessage, Chat
+
 
 # user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
@@ -82,4 +83,69 @@ class CarAdvertismentSerializer(serializers.ModelSerializer):
 
 
 
+class UserInfoRetrieveSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MyUser
+        fields = (
+            'id',
+            'username',
+        )
+
+class ChatMessageCreateSerializer(serializers.ModelSerializer):
+    user_create = UserInfoRetrieveSerializer(read_only=True)
+    class Meta:
+        model = ChatMessage
+        fields = '__all__'
+        read_only_fields = [
+            'user_create'
+        ]
+
+class ChatMessageRetrieveSerializer(serializers.ModelSerializer):
+    user_create = UserInfoRetrieveSerializer()
+    class Meta:
+        model = ChatMessage
+        fields = '__all__'
+
+class ChatMessageUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChatMessage
+        fields = '__all__'
+        read_only_fields = [
+            'date_time',
+            'user_create',
+        ]
+
+    def update(self, instance, validated_data):
+        # убираем ключи со значениями None из словаря
+        for key, value in list(validated_data.items()):
+            if value is None:
+                del validated_data[key]
+
+        instance.text = validated_data.get('text', instance.text)
+        instance.status = validated_data.get('status', instance.status)
+
+        instance.save()
+        return instance
+
+
+class ChatSerializer(serializers.ModelSerializer):
+    users = UserInfoRetrieveSerializer(many=True)
+    messages = ChatMessageRetrieveSerializer(many=True)
+    class Meta:
+        model = Chat
+        fields = '__all__'
+        read_only_fields = [
+            'users'
+        ]
+
+    # исключаем текущего пользователя из выводимого списка пользователей чата
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        request = self.context.get('request', None)
+
+        if request and request.user:
+            current_user_id = request.user.id
+            data['users'] = [user for user in data['users'] if user['id'] != current_user_id]
+
+        return data
 

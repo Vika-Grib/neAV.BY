@@ -105,7 +105,6 @@ class Car(models.Model):
     )
     salon_material = models.CharField(verbose_name='Материал салона', choices=SALON_MATERIALS, default='1', max_length=10)
 
-
     user = models.ForeignKey(MyUser, verbose_name='Пользователь', on_delete=models.CASCADE)
     # так как эта модель может быть переопределена, то нужно наследователь эту модель из джанги
 
@@ -125,7 +124,7 @@ class UsedAuto(models.Model):
     power = models.CharField(max_length=64)
     comment = models.CharField(max_length=64)
     addcat_id = models.CharField(default='1', max_length=64)
-
+    telegram_id = models.CharField(verbose_name='Телеграм_id',default='365034577', max_length=15)
 
 
 class Advertisment(Car):
@@ -240,3 +239,29 @@ class Year(models.Model):
     CAR_YEARS = ()
     car_year = models.IntegerField(verbose_name='Год', choices=CAR_YEARS)
 
+
+
+class ChatMessage(models.Model):
+    text = models.TextField(verbose_name="Текст сообщения")
+    date_time = models.DateTimeField(verbose_name="Дата отправки", auto_now_add=True)
+    user_create = models.ForeignKey(MyUser, verbose_name="Отправитель", on_delete=models.DO_NOTHING, blank=True, null=True)
+    status = models.BooleanField(verbose_name="статус прочтения получателем", default=False)
+
+    def __str__(self):
+        return f"{self.user_create.username} [{self.date_time.strftime('%d.%m.%y %H:%M')}]: {self.text[:50]}"
+
+    class Meta:
+        verbose_name = "Сообщение в чате"
+        verbose_name_plural = "Сообщения в чате"
+
+# чаты
+class Chat(models.Model):
+    users = models.ManyToManyField(MyUser, verbose_name="Пользователи чата")
+    messages = models.ManyToManyField(ChatMessage, verbose_name="сообщения", blank=True)
+
+    def __str__(self):
+        return f"чат [{self.id}]"
+
+    class Meta:
+        verbose_name = "Чат"
+        verbose_name_plural = "Чаты"
