@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import fs from 'fs';
 import { useCookies } from 'react-cookie';
+import { car_brand_model_year } from './cars.js'; // Импорт данных о машинах
 
 function GetCSRFToken() {
   const [cookies, setCookie] = useCookies(['csrftoken']);
   console.log(cookies)
   return cookies;
- };
+};
 
 const CarAdvertCreate = ({ csrfToken }) => {
   const [formData, setFormData] = useState({
@@ -28,15 +28,28 @@ const CarAdvertCreate = ({ csrfToken }) => {
     transmission: '',
     description: '',
     'X-CSRFToken': GetCSRFToken().csrftoken,
-    // Другие поля объявления
   });
 
+  const [selectedBrand, setSelectedBrand] = useState('');
+  const [availableModels, setAvailableModels] = useState([]);
+  const [availableYears, setAvailableYears] = useState([]);
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+
+    if (name === 'brand') {
+      setSelectedBrand(value);
+      setAvailableModels(Object.keys(car_brand_model_year[value] || {}));
+      setAvailableYears([]);
+    } else if (name === 'model') {
+    // Если выбрана модель автомобиля, обновляем список доступных годов
+    const selectedYear = car_brand_model_year[selectedBrand]?.[value] || [];
+    setAvailableYears(selectedYear);
+  }
   };
 
   const handlePhotoChange = (e) => {
@@ -46,25 +59,25 @@ const CarAdvertCreate = ({ csrfToken }) => {
     });
   };
 
-  console.log(formData)
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData['X-CSRFToken']) {
-    console.error('CSRF token отсутсвует!');
-    return;
-  }
+      console.error('CSRF token отсутсвует!');
+      return;
+    }
 
     try {
-    console.log(formData);
       const response = await axios.post(
-      '/api/v1/mainapp/car/advert/', formData,{
-        headers: {
-        'X-CSRFToken': formData['X-CSRFToken'],
-        'Content-Type': 'multipart/form-data',
-        },
-      });
-
+        '/api/v1/mainapp/car/advert/',
+        formData,
+        {
+          headers: {
+            'X-CSRFToken': formData['X-CSRFToken'],
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+      );
 
       console.log(response.data); // Выводим ответ сервера, например, id созданного объявления
     } catch (error) {
@@ -73,11 +86,11 @@ const CarAdvertCreate = ({ csrfToken }) => {
   };
 
   return (
-     <div>
+    <div>
       <h2>Создание объявления</h2>
       <form onSubmit={handleSubmit} className="needs-validation" noValidate>
         <div className="mb-3 col-sm-6">
-          <label htmlFor="advert_type" className="form-label">Марка авто:</label>
+          <label htmlFor="advert_type" className="form-label">Вид транспорта:</label>
           <select type="text" className="form-control" id="advert_type" name="advert_type" value={formData.advert_type} onChange={handleChange} required>
           <option value="1">Легковой автомобиль </option>
           <option value="2">Грузовик или фурго </option>
@@ -93,7 +106,11 @@ const CarAdvertCreate = ({ csrfToken }) => {
 
         <div className="mb-3 col-sm-6">
           <label htmlFor="brand" className="form-label">Марка авто:</label>
-          <input type="text" className="form-control" id="brand" name="brand" value={formData.brand} onChange={handleChange} required />
+          <select type="text" className="form-control" id="brand" name="brand" value={formData.brand} onChange={handleChange} required>
+            {Object.keys(car_brand_model_year).map(brand => (
+              <option key={brand} value={brand}>{brand}</option>
+            ))}
+          </select>
           <div className="invalid-feedback">
             Пожалуйста, введите марку авто.
           </div>
@@ -101,11 +118,28 @@ const CarAdvertCreate = ({ csrfToken }) => {
 
         <div className="mb-3 col-sm-6">
           <label htmlFor="model" className="form-label">Модель авто:</label>
-          <input type="text" className="form-control" id="model" name="model" value={formData.model} onChange={handleChange} required />
+          <select type="text" className="form-control" id="model" name="model" value={formData.model} onChange={handleChange} required>
+            {availableModels.map(model => (
+              <option key={model} value={model}>{model}</option>
+            ))}
+          </select>
           <div className="invalid-feedback">
             Пожалуйста, введите модель авто.
           </div>
         </div>
+
+        <div className="mb-3 col-sm-6">
+          <label htmlFor="car_year" className="form-label">Год авто:</label>
+          <select type="text" className="form-control" id="car_year_select" name="car_year" value={formData.car_year} onChange={handleChange} required>
+              {availableYears.map(year => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+          </select>
+          <div className="invalid-feedback">
+            Пожалуйста, введите год авто.
+          </div>
+          </div>
+
 
         <div className="mb-3 col-sm-6">
           <label htmlFor="photo" className="form-label">Фото авто:</label>
@@ -182,13 +216,6 @@ const CarAdvertCreate = ({ csrfToken }) => {
           </div>
           </div>
 
-          <div className="mb-3 col-sm-6">
-          <label htmlFor="car_year" className="form-label">Год авто:</label>
-          <input type="text" className="form-control" id="car_year" name="car_year" value={formData.car_year} onChange={handleChange} required />
-          <div className="invalid-feedback">
-            Пожалуйста, введите год авто.
-          </div>
-          </div>
 
           <div className="mb-3 col-sm-6">
           <label htmlFor="price" className="form-label">Цена:</label>
@@ -240,11 +267,14 @@ const CarAdvertCreate = ({ csrfToken }) => {
         {/* Разделительный блок */}
         {/*<hr style={{ margin: '20px 0' }} />*/}
         {/* Добавить другие поля формы для создания объявления */}
+
         <button type="submit" className="btn btn-secondary">Создать объявление</button>
       </form>
     </div>
   );
 };
 
-
 export default CarAdvertCreate;
+
+
+
