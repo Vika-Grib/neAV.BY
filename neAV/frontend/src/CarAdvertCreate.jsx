@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 import { car_brand_model_year } from './cars.js'; // Импорт данных о машинах
+import RulesComponent from './RulesComponent';
 
 function GetCSRFToken() {
   const [cookies, setCookie] = useCookies(['csrftoken']);
@@ -85,9 +86,42 @@ const CarAdvertCreate = ({ csrfToken }) => {
     }
   };
 
+
+
+
+  const formContainerStyle = {
+    marginTop: '20px', // Отступ сверху
+    backgroundColor: '#eeeeee', // Цвет фона
+    padding: '20px', // Отступы внутри блока
+    borderRadius: '8px', // Округление углов
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', // Тень блока
+    maxWidth: '700px', // Максимальная ширина блока
+  };
+
+     const mainContainerStyle = {
+      display: 'flex',
+    };
+
+    const contentContainerStyle = {
+      flex: '1',
+    };
+
+    const sideContainerStyle = {
+      marginLeft: '0px',
+      marginRight: '100px',
+      marginTop: '-40px',
+    };
+
+    const titleStyle = {
+      marginTop: '20px', // Отступ сверху
+    };
+
   return (
-    <div>
-      <h2>Создание объявления</h2>
+    <div className="container">
+      <h2 style={titleStyle}>⠀Новое объявление о продаже автомобиля</h2>
+      <div style={mainContainerStyle}>
+      <div style={contentContainerStyle}>
+      <div style={formContainerStyle}>
       <form onSubmit={handleSubmit} className="needs-validation" noValidate>
         <div className="mb-3 col-sm-6">
           <label htmlFor="advert_type" className="form-label">Вид транспорта:</label>
@@ -271,8 +305,18 @@ const CarAdvertCreate = ({ csrfToken }) => {
         <button type="submit" className="btn btn-secondary">Создать объявление</button>
       </form>
     </div>
+    </div>
+       <div style={sideContainerStyle}>
+          <RulesComponent />
+       </div>
+    </div>
+    </div>
   );
 };
+
+
+
+
 
 export default CarAdvertCreate;
 

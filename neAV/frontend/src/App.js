@@ -49,12 +49,13 @@ export default function App() {
           style={bannerStyle}
         />
 
-    <h1 style={{color: "red", textAlign: "center", borderBottom: "2px solid #808080", paddingBottom: "10px"}}>Объявления о продаже авто</h1>
+    <h1 style={{color: "red", textAlign: "center", borderBottom: "2px solid #808080", paddingBottom: "10px"}}></h1>
     <nav style={navStyle}>
         {/* <Link to="/api/v1/mainapp/all/">Список автомобилей</Link> */}
-        <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Создать объявление</Link>
-        <Link to="/api/v1/mainapp/car/advert/" >Мои объявления</Link>
         <Link to="/api/v1/mainapp/car/used/" >Авто с пробегом</Link>
+        <Link to="/api/v1/mainapp/car/advert/" >Мои объявления</Link>
+        <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Подать объявление</Link>
+
 
 
           <Link to="/api/auth/logout/">
@@ -94,9 +95,9 @@ export default function App() {
     <h1 style={{color: "red", textAlign: "center", borderBottom: "2px solid #808080", paddingBottom: "10px"}}>Объявления о продаже авто</h1>
     <nav style={navStyle}>
         {/* <Link to="/api/v1/mainapp/all/">Список автомобилей</Link> */}
-        <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Создать объявление</Link>
-        <Link to="/api/v1/mainapp/car/advert/" >Все объявления</Link>
         <Link to="/api/v1/mainapp/car/used/" >Авто с пробегом</Link>
+        <Link to="/api/v1/mainapp/car/advert/" >Все объявления</Link>
+        <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Подать объявление</Link>
         <Link to="/api/auth/">Авторизоваться</Link>
     </nav>
 
