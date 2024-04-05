@@ -37,7 +37,7 @@ const CarAdvertDetail = () => {
 
         if (response.status === 204) {
           // Удаление прошло успешно
-          navigate('api/v1/mainapp/car/advert/'); // Перенаправление на страницу со всеми оставшимися своими объявлениями
+          navigate('/api/v1/mainapp/car/advert/'); // Перенаправление на страницу со всеми оставшимися своими объявлениями
         }
       } catch (error) {
         console.error('Ошибка при удалении объявления', error);
