@@ -64,7 +64,7 @@ const CarAdvertList = () => {
       <div>
         {/* Кнопки для навигации */}
         {currentPage > 1 && (
-          <button onClick={goToPreviousPage}>Предыдущая страница </button>
+          <button onClick={goToPreviousPage} style={{ marginRight: '10px' }}>Предыдущая страница</button>
         )}
         <button onClick={goToNextPage}>Следующая страница</button>
       </div>

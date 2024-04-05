@@ -70,6 +70,9 @@ const AutoZProbDetail = ({ csrfToken }) => {
     return <div style={styles.loading}>Загрузка информации...</div>;
   }
 
+
+
+
   return (
     <div style={styles.container}>
       <h2 style={styles.header}>Информация об автомобиле</h2>

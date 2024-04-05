@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
-
+import { useParams, useNavigate } from 'react-router-dom';
 
 
 
 const CarAdvertDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // Хук для перенаправления
   const [advert, setAdvert] = useState(null);
 
   useEffect(() => {
@@ -21,6 +21,30 @@ const CarAdvertDetail = () => {
 
     fetchAdvert();
   }, [id]);
+
+  const handleDelete = async () => {
+  if (window.confirm('Вы уверены, что хотите удалить это объявление?')) {
+    try {
+      // Предполагаем, что CSRF токен сохранён в cookies под именем 'csrftoken'
+      const csrfToken = document.cookie.split('; ').find(row => row.startsWith('csrftoken=')).split('=')[1];
+
+      const response = await axios.delete(`/api/v1/mainapp/car/advert/${id}/`, {
+        headers: {
+          'X-CSRFToken': csrfToken,
+        }
+        // withCredentials: true, // Этот параметр необходим только если вы используете аутентификацию на основе кук.
+      });
+
+        if (response.status === 204) {
+          // Удаление прошло успешно
+          navigate('api/v1/mainapp/car/advert/'); // Перенаправление на страницу со всеми оставшимися своими объявлениями
+        }
+      } catch (error) {
+        console.error('Ошибка при удалении объявления', error);
+        alert('Не удалось удалить объявление. Пожалуйста, попробуйте ещё раз.');
+      }
+    }
+  };
 
   if (!advert) {
     return <div style={styles.loading}>Загрузка информации...</div>;
@@ -42,6 +66,10 @@ const CarAdvertDetail = () => {
         <p style={styles.info}>Пробег: {advert.mileage}</p>
         <p style={styles.info}>Цена: {advert.price} {advert.price_type === 1 ? 'USD' : advert.price_type === 2 ? 'BYN' : ''}</p>
         <p style={styles.info}>Описание авто: {advert.description}</p>
+
+        <button onClick={handleDelete} style={styles.deleteButton}>
+        Удалить объявление
+        </button>
       </div>
     </div>
   );
@@ -87,6 +115,15 @@ const styles = {
   loading: {
     textAlign: 'center',
     fontSize: '18px',
+  },
+  deleteButton: {
+    backgroundColor: 'red',
+    color: 'white',
+    padding: '10px 20px',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    marginTop: '20px', // Пример отступа сверху
   },
 };
 

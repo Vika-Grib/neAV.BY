@@ -38,7 +38,6 @@ urlpatterns = [
 # Также мы включаем login URLs доступный для просмотра API
 # api/v1/mainapp/get-telegram-id/
 # api/v1/mainapp/car/create/
-# api/v1/mainapp/all/
 # api/v1/mainapp/car/detail/4/
 # api/v1/mainapp/car/advert/ тут все объявления машин
 # api/v1/mainapp/car/advert/create/

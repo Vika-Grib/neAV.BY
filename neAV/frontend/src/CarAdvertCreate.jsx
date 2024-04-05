@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useCookies } from 'react-cookie';
 import { car_brand_model_year } from './cars.js'; // Импорт данных о машинах
 import RulesComponent from './RulesComponent';
+// import { useNavigate } from 'react-router-dom';
 
 function GetCSRFToken() {
   const [cookies] = useCookies(['csrftoken']);
@@ -10,6 +11,7 @@ function GetCSRFToken() {
 }
 
 const CarAdvertCreate = () => {
+//   const navigate = useNavigate();
   // Начальное состояние формы
   const [formData, setFormData] = useState({
     photo: null,
@@ -144,6 +146,9 @@ const CarAdvertCreate = () => {
         },
       });
       console.log(response.data); // Выводим ответ сервера
+
+//       // Используем navigate для перенаправления
+//       navigate("/api/v1/mainapp/car/advert/");
     } catch (error) {
       console.error('Ошибка при создании объявления', error);
     }
@@ -166,12 +171,14 @@ const CarAdvertCreate = () => {
       backgroundColor: '#eeeeee',
       padding: '20px',
       borderRadius: '8px',
-      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)',
       maxWidth: '700px',
+      paddingBottom: '50px', // Добавлено нижнее пространство
     };
 
     const sideContainerStyle = {
-      marginLeft: '20px',
+      marginRight: '100px',
+      marginTop: '-65px',
     };
 
 
