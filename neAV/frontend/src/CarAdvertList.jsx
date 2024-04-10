@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const CarAdvertList = () => {
   const [adverts, setAdverts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+
 
   useEffect(() => {
     const fetchAdverts = async () => {
@@ -19,16 +19,8 @@ const CarAdvertList = () => {
     };
 
     fetchAdverts();
-  }, [currentPage]);
+  }, []);
 
-  // Функции для навигации
-  const goToPreviousPage = () => {
-    setCurrentPage(currentPage > 1 ? currentPage - 1 : 1);
-  };
-
-  const goToNextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
 
   if (!adverts.length) {
     return <div>Загрузка списка объявлений...</div>;
@@ -57,15 +49,6 @@ const CarAdvertList = () => {
             <Link to={`/api/v1/mainapp/car/advert/${advert.id}`} style={linkStyle}>Подробнее</Link>
           </div>
         ))}
-      </div>
-      {/* Кнопки для навигации */}
-      <div>
-        {currentPage > 1 && (
-          <button onClick={goToPreviousPage}>Предыдущая страница</button>
-        )}
-
-          <button onClick={goToNextPage} style={{ marginLeft: '10px' }}>Следующая страница</button>
-
       </div>
     </div>
   );

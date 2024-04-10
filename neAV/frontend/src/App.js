@@ -10,6 +10,8 @@ import profile_photo from './noneuser.png';
 import Auto_z_probegom from './Auto_z_probegom';
 import Auto_z_prob_detail from './Auto_z_prob_detail';
 import CarSearch from "./CarSearch";
+import FilteredResults from './FilteredResults';
+
 
 
 const bannerStyle = {
@@ -51,18 +53,17 @@ export default function App() {
 
     <h1 style={{color: "red", textAlign: "center", borderBottom: "2px solid #808080", paddingBottom: "10px"}}></h1>
     <nav style={navStyle}>
+        <div style={logoStyle}>neAV.BY</div>
+        <div style={linksContainerStyle}>
         {/* <Link to="/api/v1/mainapp/all/">Список автомобилей</Link> */}
-        <Link to="/api/v1/mainapp/car/used/" >Авто с пробегом</Link>
-        <Link to="/api/v1/mainapp/car/advert/" >Мои объявления</Link>
+        <Link to="/api/v1/mainapp/car/used/" style={{ textDecoration: 'none' }}>Объявления</Link>
+        <Link to="/api/v1/mainapp/car/advert/" style={{ textDecoration: 'none' }}>Мои объявления</Link>
         <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Подать объявление</Link>
-
-
 
           <Link to="/api/auth/logout/">
           <button type="button" class="btn btn-outline-info" onClick={handleLogout} style={{ marginRight: '10px' }}> <img src={profile_photo} width={40} height={40} alt='Profile photo'/>Выйти</button>
           </Link>
-
-
+        </div>
     </nav>
 
 
@@ -76,6 +77,7 @@ export default function App() {
         <Route path="/api/v1/mainapp/car/used/:id" element={<Auto_z_prob_detail />} />
         <Route path="/api/auth/logout" element={<CarAdvertList />} />
         <Route path="/api/v1/mainapp/car/car_search" element={<CarSearch/>}/>
+        <Route path="/filtered-results" element={<FilteredResults />} />
     </Routes>
 
     </div>
@@ -94,12 +96,16 @@ export default function App() {
 
     <h1 style={{color: "red", textAlign: "center", borderBottom: "2px solid #808080", paddingBottom: "10px"}}>Объявления о продаже авто</h1>
     <nav style={navStyle}>
+        <div style={logoStyle}>neAV.BY</div>
+        <div style={linksContainerStyle}>
         {/* <Link to="/api/v1/mainapp/all/">Список автомобилей</Link> */}
-        <Link to="/api/v1/mainapp/car/used/" >Авто с пробегом</Link>
-        <Link to="/api/v1/mainapp/car/advert/" >Все объявления</Link>
+        <Link to="/api/v1/mainapp/car/used/" style={{ textDecoration: 'none' }}>Объявления</Link>
+        <Link to="/api/v1/mainapp/car/advert/" style={{ textDecoration: 'none' }}>Все объявления</Link>
         <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Подать объявление</Link>
         <Link to="/api/auth/">Авторизоваться</Link>
+        </div>
     </nav>
+
 
 
     <Routes>
@@ -112,6 +118,7 @@ export default function App() {
         <Route path="/api/v1/mainapp/car/used" element={<Auto_z_probegom />} />
         <Route path="/api/v1/mainapp/car/used/:id" element={<Auto_z_prob_detail />} />
         <Route path="/api/v1/mainapp/car/car_search" element={<CarSearch/>}/>
+        <Route path="/filtered-results" element={<FilteredResults />} />
     </Routes>
 
     </div>
@@ -121,11 +128,36 @@ export default function App() {
   };
 
 
+
+const linksContainerStyle = {
+  display: 'flex',
+  justifyContent: 'space-evenly', // Или любой другой тип выравнивания, который вы предпочитаете
+  flexGrow: 1, // Позволяет блоку ссылок заполнить доступное пространство
+};
+
+const linkStyle = {
+  textDecoration: 'none',
+  color: '#0366d6',
+  marginLeft: '20px', // Или любой другой отступ, который вам нужен
+  marginRight: '20px', // Или любой другой отступ, который вам нужен
+};
+
+const logoStyle = {
+  fontFamily: 'Montserrat, sans-serif',
+  color: '#1a93ef',
+  borderRadius: '8px',
+  fontWeight: 'bold', // Жирный шрифт
+  marginRight: '-20px', // Автоматический отступ справа для выравнивания логотипа и элементов навигации
+  marginLeft: '50px',
+};
+
+
 const navStyle = {
   display: 'flex',
   justifyContent: 'space-around',
   padding: '10px',
   background: '#f0f0f0',
+  zIndex: '10',
 };
 
 const buttonStyle = {

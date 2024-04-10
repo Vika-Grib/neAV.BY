@@ -19,6 +19,7 @@ urlpatterns = [
     path('all/', CarListView1.as_view()),
     path('car/', include(router.urls)),
     path('send_tg_message/', send_tg_message, name='send_tg_message'),
+    path('api/v1/mainapp/car/used/filter', used_auto_list, name='used_auto_list'),
 
     path('get-telegram-id/', get_telegram_id, name='get_telegram_id'),  # Измененный путь для API получения telegram_id
     path('api/', include('djoser.urls')),  # Маршруты для аутентификации и регистрации пользователей

@@ -25,7 +25,35 @@ from rest_framework.authentication import TokenAuthentication, SessionAuthentica
 from .send_tg_messages import *
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
-from .models import MyUser
+from .models import MyUser, UsedAuto
+
+
+@require_GET
+def used_auto_list(request):
+    # Получение query параметров из запроса
+    brand = request.GET.get('brand')
+    model = request.GET.get('model')
+    year = request.GET.get('year')
+    price_min = request.GET.get('price_min')
+    price_max = request.GET.get('price_max')
+
+    # Фильтрация данных на основе полученных параметров
+    used_autos = UsedAuto.objects.all()
+    if brand:
+        used_autos = used_autos.filter(car__brand=brand)  # Предполагая, что есть связь с моделью Car
+    if model:
+        used_autos = used_autos.filter(car__model=model)  # Предполагая, что есть связь с моделью Car
+    if year:
+        used_autos = used_autos.filter(year=year)
+    if price_min:
+        used_autos = used_autos.filter(price_for_bel_rub__gte=price_min)
+    if price_max:
+        used_autos = used_autos.filter(price_for_bel_rub__lte=price_max)
+
+    # Сериализация данных в JSON
+    used_auto_data = list(used_autos.values('name', 'price_for_bel_rub', 'photo', 'year', 'kyzov', 'privod', 'color', 'probeg'))
+    return JsonResponse({'results': used_auto_data})
+
 
 
 @require_GET

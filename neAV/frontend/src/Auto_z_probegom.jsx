@@ -2,10 +2,26 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import FloatingFish from './FloatingFish';
+import UsedAutoFilterForm from './UsedAutoFilterForm';
 
 const CarAdvertList = () => {
   const [adverts, setAdverts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1); // Добавляем состояние для текущей страницы
+
+  const handleFilter = (filters) => {
+        const query = Object.keys(filters)
+            .filter(key => filters[key]) // Удаление пустых полей
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(filters[key])}`)
+            .join('&');
+        axios.get(`/api/v1/mainapp/car/used/filter?${query}`)
+            .then(response => {
+                setAdverts(response.data.results);
+            })
+            .catch(error => {
+                console.error('Ошибка при фильтрации списка объявлений', error);
+            });
+    };
 
   useEffect(() => {
     const fetchAdverts = async () => {
@@ -35,8 +51,11 @@ const CarAdvertList = () => {
   }
 
   return (
+    <>
+    <FloatingFish />
     <div style={advertsContainerStyle}>
-      <h2>Список объявлений</h2>
+      <h2 style={{ textAlign: 'center', margin: '0 auto' }}>Список объявлений</h2>
+      <UsedAutoFilterForm onFilter={handleFilter} />
       <div style={advertsListStyle}>
         {adverts.map((advert) => (
           <div key={advert.id} style={advertBlockStyle}>
@@ -69,12 +88,14 @@ const CarAdvertList = () => {
         <button onClick={goToNextPage}>Следующая страница</button>
       </div>
     </div>
+     </>
   );
 };
 
 const advertsContainerStyle = {
   maxWidth: '1400px',
   margin: '0 auto',
+  paddingTop: '20px',
 };
 
 const advertsListStyle = {

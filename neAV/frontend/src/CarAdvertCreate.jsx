@@ -10,6 +10,8 @@ function GetCSRFToken() {
   return cookies.csrftoken; // Обновлено для прямого возврата csrftoken
 }
 
+
+
 const CarAdvertCreate = () => {
 //   const navigate = useNavigate();
   // Начальное состояние формы
