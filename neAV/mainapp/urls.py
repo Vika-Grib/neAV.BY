@@ -29,7 +29,7 @@ urlpatterns = [
     path('chat_message/update/<int:pk>', ChatMessageUpdateView.as_view(), name='chat_message_update_view'),
 ]
 
-# api/v1/mainapp/ chat_message/create/
+# api/v1/mainapp/chat_message/create/
 # app_name = 'car'
 # router = routers.DefaultRouter()
 # router.register(r'groups', views.GroupViewSet)
