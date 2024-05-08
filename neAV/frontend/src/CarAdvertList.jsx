@@ -1,30 +1,65 @@
-// CarAdvertList.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+const emptyAdvertsStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: '400px', // Высота контейнера
+  textAlign: 'center',
+  color: '#666', // Цвет текста
+  margin: '20px 0',
+};
+
 const CarAdvertList = () => {
   const [adverts, setAdverts] = useState([]);
 
-
   useEffect(() => {
     const fetchAdverts = async () => {
-      try {
-        const response = await axios.get('/api/v1/mainapp/car/advert/');
-        console.log(response.data)
-        setAdverts(response.data.results);
-      } catch (error) {
-        console.error('Ошибка при получении списка объявлений', error);
+      // Проверяем, залогинен ли пользователь перед запросом объявлений
+      if (sessionStorage.getItem('status') === 'loggedIn') {
+        try {
+          const response = await axios.get('/api/v1/mainapp/car/advert/');
+          console.log(response.data);
+          setAdverts(response.data.results);
+        } catch (error) {
+          console.error('Ошибка при получении списка объявлений', error);
+        }
+      } else {
+        setAdverts([]);  // Очищаем список объявлений, если пользователь не залогинен
       }
     };
 
     fetchAdverts();
+
+    // Подписка на события изменения sessionStorage для реакции на выход пользователя
+    const handleStorageChange = () => {
+      fetchAdverts();  // Перезапускаем загрузку объявлений при изменении sessionStorage
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
   }, []);
 
 
   if (!adverts.length) {
-    return <div>Загрузка списка объявлений...</div>;
-  }
+      return (
+        <div style={emptyAdvertsStyle}>
+          <img
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejFzN2RlOXdyZjlzc3d2bDdyc21rb3NwNmZycnkwdmFrZWl4ZHZ5YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xTmX0sd5FjqrYc/giphy.gif" // Замените URL на адрес вашей картинки
+            alt="Нет объявлений"
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
+          <p>На данный момент объявлений нет. <Link to="/api/auth/" style={linkStyle}>Зарегестрируйтесь и разместите ваше объявление</Link></p>
+        </div>
+      );
+    }
+
 
   return (
     <div style={advertsContainerStyle}>
