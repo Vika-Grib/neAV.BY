@@ -17,7 +17,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from .models import Car, Advertisment, MyUser, UsedAuto, Chat, ChatMessage
 from .serializers import GroupSerializer, UserSerializer, CarDetailSerializer, CarListView, CarAdvertismentSerializer, \
-    UserCreateSerializer, UsedCarListView, ChatMessageCreateSerializer, ChatMessageUpdateSerializer, ChatSerializer
+    UserCreateSerializer, UsedCarListView, MessageSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
@@ -26,6 +26,7 @@ from .send_tg_messages import *
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
 from .models import MyUser, UsedAuto
+from django.db.models import Subquery, Q, OuterRef
 
 
 @require_GET
@@ -101,7 +102,7 @@ def send_tg_message(request):
 
         text = request.POST.get('text')
 
-        # получаем telegram_id выбранных пользаков
+        # получаем telegram_id выбранных пользователей
         telegram_ids = [item['telegram_id'] for item in selected_items]
         # срезаем тех, кто не привязал телегу (без telegram_id)
         filtered_tg_ids = list(filter(None, telegram_ids))
@@ -174,7 +175,11 @@ class CarCreateView(ModelViewSet):
 # чтобы посмотреть все объекты в базе данных
 class CarListView1(generics.ListAPIView):
     serializer_class = CarListView
-    queryset = Car.objects.all()
+
+    def get_queryset(self):
+        user_id = self.request.user.id
+        return Car.objects.filter(user_id=user_id)
+
     # ListAPIView обязательно принимает queryset - какие записи вынуть из БД
     # permission_classes = [permissions.AllowAny, ] # если нужно, чтобы просматривать должен только авторизованный
 # просмотр конкретной записи, редактирование, удаление
@@ -194,77 +199,130 @@ class CarDetailView(ModelViewSet): # RetrieveUpdateDestroyAPIView - метод �
 
 class CarAdvertisment(ModelViewSet):
     serializer_class = CarAdvertismentSerializer
-    queryset = Advertisment.objects.all()
+    def get_queryset(self):
+        user_id = self.request.user.id
+        return Advertisment.objects.filter(user_id=user_id)
+
     # permission_classes = [UserPermission, ]
     parser_classes = (MultiPartParser, FormParser) # для фото
 
 
 
-# class AdvertCreateView(generics.CreateAPIView):
-#     serializer_class = CarAdvertismentSerializer
-#     permission_classes = [UserPermission, ]
+class MyInbox(generics.ListAPIView):
+    serializer_class = MessageSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']
+
+        # messages = ChatMessage.objects.filter(
+        #     id__in=Subquery(
+        #         MyUser.objects.filter(
+        #             Q(sender__reciever=user_id) |
+        #             Q(reciever__sender=user_id)
+        #         ).distinct().annotate(
+        #             last_msg=Subquery(
+        #                 ChatMessage.objects.filter(
+        #                     Q(sender=OuterRef('id'), reciever=user_id) |
+        #                     Q(reciever=OuterRef('id'), sender=user_id)
+        #                 ).order_by('-id')[:1].values_list('id', flat=True)
+        #             )
+        #         ).values_list('last_msg', flat=True).order_by("-id")
+        #     )
+        # ).order_by("-id")
+        messages = ChatMessage.objects.filter(
+            Q(user_create_id=user_id) | Q(receiver_id=user_id)
+        ).distinct().order_by('-date_time')
+
+        return messages
+
+
+class GetMessages(generics.ListAPIView):
+    serializer_class = MessageSerializer
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']
+        messages = ChatMessage.objects.filter(
+            Q(user_create_id=user_id) | Q(receiver_id=user_id)
+        ).distinct().order_by('-date_time')
+
+        return messages
+        # sender_id = self.kwargs['sender_id']
+        # reciever_id = self.kwargs['reciever_id']
+        # messages = ChatMessage.objects.filter(sender__in=[sender_id, reciever_id],
+        #                                       reciever__in=[sender_id, reciever_id])
+
+        # return messages
+
+
+class SendMessages(generics.CreateAPIView):
+    serializer_class = MessageSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(user_create=self.request.user)
+
 
 
 #######################################################################
 # создать сообщение в чате или новый чат с сообщением (если чата ещё нет)
-class ChatMessageCreateView(generics.CreateAPIView):
-    # queryset = ChatMessage.objects.all()
-    # serializer_class = ChatMessageCreateSerializer
-    permission_classes = [IsAuthenticated]
-
-    def post(self, request):
-        user_id = request.data.get('user_id')
-        message_text = request.data.get('text')
-
-        try:
-            user = MyUser.objects.get(id=user_id)
-        except MyUser.DoesNotExist:
-            return Response({"error": "Пользователь не найден"}, status=status.HTTP_404_NOT_FOUND)
-
-        chat = Chat.objects.filter(users__in=[self.request.user, user]).annotate(num_users=Count('users')).filter(
-            num_users=2).first()
-
-        if not chat:
-            chat = Chat.objects.create()
-            chat.users.add(self.request.user, user)
-
-        chat_message = ChatMessage.objects.create(
-            text=message_text,
-            user_create=self.request.user,
-        )
-
-        chat.messages.add(chat_message)
-
-        serializer = ChatMessageCreateSerializer(chat_message)
-        return Response({"info": "Сообщение создано",
-                         "message": serializer.data,
-                         "chat_id": chat.id,
-                         "users": [
-                             {
-                                 "id": f"{user.id}",
-                                 "username": f"{user.username}",
-                                 "photo": f"{request.build_absolute_uri(user.photo.url) if user.photo else None}"
-                             },
-                             {
-                                 "id": f"{self.request.user.id}",
-                                 "username": f"{self.request.user.username}",
-                                 "photo": f"{request.build_absolute_uri(self.request.user.photo.url) if self.request.user.photo else None}"
-                             }
-                         ]
-                         }, status=status.HTTP_201_CREATED)
-
-
-# получить список всех чатов текущего пользователя
-class ChatMessageRetrieveView(generics.ListAPIView):
-    serializer_class = ChatSerializer
-    permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        user = self.request.user
-        return Chat.objects.filter(users=user)
-
-# обновить сообщение в чате
-class ChatMessageUpdateView(generics.RetrieveUpdateAPIView):
-    serializer_class = ChatMessageUpdateSerializer
-    permission_classes = [IsAuthenticated]
-    queryset = ChatMessage.objects.all()
+# class ChatMessageCreateView(generics.CreateAPIView):
+#     queryset = ChatMessage.objects.all()
+#     serializer_class = ChatMessageCreateSerializer
+#     permission_classes = [IsAuthenticated]
+#
+#     def post(self, request):
+#         user_id = request.data.get('user_id')
+#         message_text = request.data.get('text')
+#
+#         try:
+#             user = MyUser.objects.get(id=user_id)
+#         except MyUser.DoesNotExist:
+#             return Response({"error": "Пользователь не найден"}, status=status.HTTP_404_NOT_FOUND)
+#
+#         chat = Chat.objects.filter(users__in=[self.request.user, user]).annotate(num_users=Count('users')).filter(
+#             num_users=2).first()
+#
+#         if not chat:
+#             chat = Chat.objects.create()
+#             chat.users.add(self.request.user, user)
+#
+#         chat_message = ChatMessage.objects.create(
+#             text=message_text,
+#             user_create=self.request.user,
+#         )
+#
+#         chat.messages.add(chat_message)
+#
+#         serializer = ChatMessageCreateSerializer(chat_message)
+#         return Response({"info": "Сообщение создано",
+#                          "message": serializer.data,
+#                          "chat_id": chat.id,
+#                          "users": [
+#                              {
+#                                  "id": f"{user.id}",
+#                                  "username": f"{user.username}",
+#                                  "photo": f"{request.build_absolute_uri(user.photo.url) if user.photo else None}"
+#                              },
+#                              {
+#                                  "id": f"{self.request.user.id}",
+#                                  "username": f"{self.request.user.username}",
+#                                  "photo": f"{request.build_absolute_uri(self.request.user.photo.url) if self.request.user.photo else None}"
+#                              }
+#                          ]
+#                          }, status=status.HTTP_201_CREATED)
+#
+#
+# # получить список всех чатов текущего пользователя
+# class ChatMessageRetrieveView(generics.ListAPIView):
+#     serializer_class = ChatSerializer
+#     permission_classes = [IsAuthenticated]
+#
+#     def get_queryset(self):
+#         user = self.request.user
+#         return Chat.objects.filter(users=user)
+#
+# # обновить сообщение в чате
+# class ChatMessageUpdateView(generics.RetrieveUpdateAPIView):
+#     serializer_class = ChatMessageUpdateSerializer
+#     permission_classes = [IsAuthenticated]
+#     queryset = ChatMessage.objects.all()

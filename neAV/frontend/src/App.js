@@ -6,11 +6,10 @@ import CarAdvertCreate from './CarAdvertCreate';
 import CarAdvertList from './CarAdvertList';
 import CarAdvertDetail from './CarAdvertDetail';
 import AuthComponent from './AuthComponent';
+import LogOutComponent from './LogOutComponent';
 import profile_photo from './noneuser.png';
 import Auto_z_probegom from './Auto_z_probegom';
 import Auto_z_prob_detail from './Auto_z_prob_detail';
-import CarSearch from "./CarSearch";
-import FilteredResults from './FilteredResults';
 
 
 
@@ -60,7 +59,7 @@ export default function App() {
         <Link to="/api/v1/mainapp/car/advert/" style={{ textDecoration: 'none' }}>Мои объявления</Link>
         <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Подать объявление</Link>
 
-          <Link to="/api/auth/logout/">
+          <Link to="/api/logout/">
           <button type="button" class="btn btn-outline-info" onClick={handleLogout} style={{ marginRight: '10px' }}> <img src={profile_photo} width={40} height={40} alt='Profile photo'/>Выйти</button>
           </Link>
         </div>
@@ -75,9 +74,7 @@ export default function App() {
         <Route path="/api/v1/mainapp/car/advert/:id" element={<CarAdvertDetail />} />
         <Route path="/api/v1/mainapp/car/used" element={<Auto_z_probegom />} />
         <Route path="/api/v1/mainapp/car/used/:id" element={<Auto_z_prob_detail />} />
-        <Route path="/api/auth/logout" element={<CarAdvertList />} />
-        <Route path="/api/v1/mainapp/car/car_search" element={<CarSearch/>}/>
-        <Route path="/filtered-results" element={<FilteredResults />} />
+        <Route path="/api/logout/" element={<LogOutComponent />} />
     </Routes>
 
     </div>
@@ -100,8 +97,8 @@ export default function App() {
         <div style={linksContainerStyle}>
         {/* <Link to="/api/v1/mainapp/all/">Список автомобилей</Link> */}
         <Link to="/api/v1/mainapp/car/used/" style={{ textDecoration: 'none' }}>Объявления</Link>
-        <Link to="/api/v1/mainapp/car/advert/" style={{ textDecoration: 'none' }}>Все объявления</Link>
-        <Link to="/api/v1/mainapp/car/advert/create/" className="btn btn-primary" >Подать объявление</Link>
+        <Link to="/api/v1/mainapp/car/advert/" style={{ textDecoration: 'none' }}>Мои объявления</Link>
+
         <Link to="/api/auth/">Авторизоваться</Link>
         </div>
     </nav>
@@ -109,16 +106,13 @@ export default function App() {
 
 
     <Routes>
-        {/*<Route path="/api/v1/mainapp/all/" element={<CarList />} /> */}
-        {/*<Route path="/api/v1/mainapp/car/detail/id" element={<CarDetail />} /> */}
         <Route path="/api/v1/mainapp/car/advert/create/" element={<CarAdvertCreate />} />
         <Route path="/api/v1/mainapp/car/advert/" element={<CarAdvertList />} />
         <Route path="/api/v1/mainapp/car/advert/:id" element={<CarAdvertDetail />} />
         <Route path="/api/auth/" element={<AuthComponent />} />
+        <Route path="/api/logout/" element={<LogOutComponent />} />
         <Route path="/api/v1/mainapp/car/used" element={<Auto_z_probegom />} />
         <Route path="/api/v1/mainapp/car/used/:id" element={<Auto_z_prob_detail />} />
-        <Route path="/api/v1/mainapp/car/car_search" element={<CarSearch/>}/>
-        <Route path="/filtered-results" element={<FilteredResults />} />
     </Routes>
 
     </div>

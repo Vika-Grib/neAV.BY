@@ -19,7 +19,7 @@ const AutoZProbDetail = ({ csrfToken }) => {
 //     const csrfToken = cookies.csrftoken;
 
     const telegram_id = sessionStorage.getItem('telegram_id');
-    console.log(telegram_id);
+    console.log('telegram_id!!!', telegram_id);
     const [formData, setFormData] = useState({
         sender_id: telegram_id,
         'X-CSRFToken': cookies.csrftoken,

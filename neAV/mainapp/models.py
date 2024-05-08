@@ -2,6 +2,8 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from datetime import datetime
+from django.db.models.signals import post_save
+
 #from django.contrib.auth import get_user_model
 #User = get_user_model()
 
@@ -13,8 +15,6 @@ from datetime import datetime
 
 
 class MyUser(AbstractUser):
-    # date_of_birth = models.DateField()
-    # height = models.FloatField()
     username = models.CharField(verbose_name='Логин', max_length=60, default='', unique=True)
     # login = models.CharField(verbose_name='Логин', max_length=30, default='')
     # token = models.CharField(verbose_name='Токен', max_length=100, default='', editable=False)
@@ -28,10 +28,6 @@ class MyUser(AbstractUser):
 
 def upload_to(instance, filename):
     return 'photos/{filename}'.format(filename=filename)
-
-
-class AdminMessaging(models.Model):
-    pass
 
 
 class Message(models.Model):
@@ -242,19 +238,23 @@ class Year(models.Model):
 
 
 class ChatMessage(models.Model):
+    user_create = models.ForeignKey(MyUser, verbose_name="Отправитель", on_delete=models.CASCADE, blank=True, null=True, related_name="created_chat_messages")  # Уникальное имя обратного отношения
+    receiver = models.ForeignKey(MyUser, verbose_name="Получатель", on_delete=models.CASCADE,
+                                 related_name="received_chat_messages", blank=True, null=True)
+
+    status = models.BooleanField(verbose_name="статус прочтения получателем", default=False)
     text = models.TextField(verbose_name="Текст сообщения")
     date_time = models.DateTimeField(verbose_name="Дата отправки", auto_now_add=True)
-    user_create = models.ForeignKey(MyUser, verbose_name="Отправитель", on_delete=models.DO_NOTHING, blank=True, null=True)
-    status = models.BooleanField(verbose_name="статус прочтения получателем", default=False)
+
 
     def __str__(self):
-        return f"{self.user_create.username} [{self.date_time.strftime('%d.%m.%y %H:%M')}]: {self.text[:50]}"
+        return f"{self.user_create} - {self.receiver}"
 
     class Meta:
         verbose_name = "Сообщение в чате"
         verbose_name_plural = "Сообщения в чате"
 
-# чаты
+
 class Chat(models.Model):
     users = models.ManyToManyField(MyUser, verbose_name="Пользователи чата")
     messages = models.ManyToManyField(ChatMessage, verbose_name="сообщения", blank=True)
@@ -265,3 +265,12 @@ class Chat(models.Model):
     class Meta:
         verbose_name = "Чат"
         verbose_name_plural = "Чаты"
+
+    # @property
+    # def sender_profile(self):
+    #     sender_profile = Profile.objects.get(user=self.sender)
+    #     return sender_profile
+    # @property
+    # def reciever_profile(self):
+    #     reciever_profile = Profile.objects.get(user=self.reciever)
+    #     return reciever_profile

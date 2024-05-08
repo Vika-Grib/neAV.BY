@@ -74,12 +74,20 @@ class ChatMessageAdmin(admin.ModelAdmin):
     list_display = ('date_time', 'short_text', 'user_create', 'status', 'id')
     search_fields = ('date_time', 'text', 'id')
     readonly_fields = ('date_time', 'user_create')
+    actions = ['delete_selected']
+
+    def delete_selected(self, request, queryset):
+        queryset.delete()
+
+    delete_selected.short_description = "Delete selected messages"
+
 
     # часть текста сообщения
     def short_text(self, obj):
         return obj.text[:100]
 
     short_text.short_description = "Сокращённый текст"
+
 
 # инлайн-класс для удобного просмотра сообщений в чатах через админку
 class ChatMessageInline(admin.TabularInline):  # Или используйте StackedInline
