@@ -60,7 +60,6 @@ const CarAdvertList = () => {
       );
     }
 
-
   return (
     <div style={advertsContainerStyle}>
       <h2>Список объявлений</h2>

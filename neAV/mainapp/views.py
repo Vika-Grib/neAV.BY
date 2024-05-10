@@ -15,7 +15,7 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.authtoken.serializers import AuthTokenSerializer
-from .models import Car, Advertisment, MyUser, UsedAuto, Chat, ChatMessage
+from .models import Car, Advertisment, MyUser, UsedAuto, ChatMessage
 from .serializers import GroupSerializer, UserSerializer, CarDetailSerializer, CarListView, CarAdvertismentSerializer, \
     UserCreateSerializer, UsedCarListView, MessageSerializer
 from django.views.decorators.csrf import csrf_exempt
@@ -27,6 +27,7 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_GET
 from .models import MyUser, UsedAuto
 from django.db.models import Subquery, Q, OuterRef
+from .pagination import CustomPagination
 
 
 @require_GET
@@ -188,7 +189,7 @@ class CarListView1(generics.ListAPIView):
 class CarListUsed(ModelViewSet):
     serializer_class = UsedCarListView
     queryset = UsedAuto.objects.all()
-
+    pagination_class = CustomPagination
 
 class CarDetailView(ModelViewSet): # RetrieveUpdateDestroyAPIView - метод позволяет редактировать, удалять и получать данные об одном объекте
     serializer_class = CarDetailSerializer # CarDetailSerializer - указываем его, потому что нужны все поля

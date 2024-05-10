@@ -2,7 +2,7 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from datetime import datetime
-from django.db.models.signals import post_save
+from django.conf import settings
 
 #from django.contrib.auth import get_user_model
 #User = get_user_model()
@@ -31,7 +31,7 @@ def upload_to(instance, filename):
 
 
 class Message(models.Model):
-    text = models.TextField(verbose_name="Текст сообщения")
+    text = models.TextField(verbose_name="Текст сообщения", null=True)
     date_time = models.DateTimeField(verbose_name="Дата отправки", default=datetime.now(), blank=True, null=True)
     message_id = models.CharField(max_length=100, verbose_name="id сообщения", default="", blank=True)
     status = models.BooleanField(verbose_name="Статус отправки", default=True)
@@ -255,16 +255,47 @@ class ChatMessage(models.Model):
         verbose_name_plural = "Сообщения в чате"
 
 
-class Chat(models.Model):
-    users = models.ManyToManyField(MyUser, verbose_name="Пользователи чата")
-    messages = models.ManyToManyField(ChatMessage, verbose_name="сообщения", blank=True)
 
-    def __str__(self):
-        return f"чат [{self.id}]"
+# class Chat(models.Model):
+#     users = models.ManyToManyField(settings.AUTH_USER_MODEL, verbose_name="Пользователи чата")
+#
+#     def __str__(self):
+#         user_names = ", ".join(user.username for user in self.users.all())
+#         return f"Чат между: {user_names}"
+#
+#     class Meta:
+#         verbose_name = "Чат"
+#         verbose_name_plural = "Чаты"
+#
+# class Message(models.Model):
+#     chat = models.ForeignKey(Chat, null=True, on_delete=models.CASCADE, verbose_name="Чат")
+#     sender = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Отправитель", null=True)
+#     message = models.TextField(verbose_name="Сообщение", null=True)
+#     timestamp = models.DateTimeField(auto_now_add=True, verbose_name="Время отправки", null=True)
+#
+#     def __str__(self):
+#         return f"Сообщение от {self.sender.username} в {self.timestamp}"
+#
+#     class Meta:
+#         ordering = ['timestamp']
+#         verbose_name = "Сообщение"
+#         verbose_name_plural = "Сообщения"
 
-    class Meta:
-        verbose_name = "Чат"
-        verbose_name_plural = "Чаты"
+
+
+
+
+#
+# class Chat(models.Model):
+#     users = models.ManyToManyField(MyUser, verbose_name="Пользователи чата")
+#     messages = models.ManyToManyField(ChatMessage, verbose_name="сообщения", blank=True)
+#
+#     def __str__(self):
+#         return f"чат [{self.id}]"
+#
+#     class Meta:
+#         verbose_name = "Чат"
+#         verbose_name_plural = "Чаты"
 
     # @property
     # def sender_profile(self):

@@ -1,7 +1,7 @@
 from django.contrib.auth.models import Group
 from knox.models import AuthToken
 from rest_framework import serializers
-from .models import Car, Advertisment, MyUser, UsedAuto, ChatMessage, Chat
+from .models import Car, Advertisment, MyUser, UsedAuto, ChatMessage
 
 
 # user = serializers.HiddenField(default=serializers.CurrentUserDefault())

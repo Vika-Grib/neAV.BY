@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import ContactSellerButton from './ContactSellerButton';
 
-//
+
 // function GetCSRFToken() {
 //   const [cookies, setCookie] = useCookies(['csrftoken']);
 //   console.log(cookies)

@@ -88,21 +88,21 @@ class ChatMessageAdmin(admin.ModelAdmin):
 
     short_text.short_description = "Сокращённый текст"
 
-
-# инлайн-класс для удобного просмотра сообщений в чатах через админку
-class ChatMessageInline(admin.TabularInline):  # Или используйте StackedInline
-    model = Chat.messages.through
-    extra = 0
-    verbose_name = "Сообщение"
-    verbose_name_plural = "Сообщения"
-
-@admin.register(Chat)
-class ChatAdmin(admin.ModelAdmin):
-    list_display = ('id',)
-    search_fields = ('id', 'messages__text')
-    exclude = ('messages',)
-    readonly_fields = ('users',)
-    inlines = [ChatMessageInline]
+#
+# # инлайн-класс для удобного просмотра сообщений в чатах через админку
+# class ChatMessageInline(admin.TabularInline):  # Или используйте StackedInline
+#     model = Chat.messages.through
+#     extra = 0
+#     verbose_name = "Сообщение"
+#     verbose_name_plural = "Сообщения"
+#
+# @admin.register(Chat)
+# class ChatAdmin(admin.ModelAdmin):
+#     list_display = ('id',)
+#     search_fields = ('id', 'messages__text')
+#     exclude = ('messages',)
+#     readonly_fields = ('users',)
+#     inlines = [ChatMessageInline]
 
 
 async def broadcast(text, recipients):
@@ -114,4 +114,3 @@ async def broadcast(text, recipients):
 
 
 admin.site.register(Advertisment, AdvertismentAdmin)
-
