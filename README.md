@@ -84,7 +84,7 @@ python manage.py migrate
 5. Run the Django development server:
 
 
-python manage.py runserver
+```python manage.py runserver```
 
 
 6. Перейдите в директорию фронтенда и установите зависимости:
