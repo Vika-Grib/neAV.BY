@@ -189,4 +189,4 @@ Main frontend file written in React. Manages routing and component rendering.
 
 Если у вас есть вопросы или предложения, пожалуйста, свяжитесь с нами по email: victoria.grib@gmail.com  
 If you have any questions or suggestions, please contact us at: victoria.grib@gmail.com
-```
+
