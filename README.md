@@ -64,20 +64,20 @@ The project consists of the following main files:
 
 2. Перейдите в директорию проекта:
 2. Navigate to the project directory:
-cd <название директории>
-cd <directory name>
+```cd <название директории>
+cd <directory name>```
 
 3. Установите зависимости для бэкенда:
 3. Install backend dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 
 4. Настройте базу данных и примените миграции:
 4. Set up the database and apply migrations:
 
-python manage.py makemigrations
-python manage.py migrate
+```python manage.py makemigrations
+python manage.py migrate```
 
 
 5. Запустите сервер разработки Django:
@@ -90,14 +90,14 @@ python manage.py migrate
 6. Перейдите в директорию фронтенда и установите зависимости:
 6. Navigate to the frontend directory and install dependencies:
 
-cd frontend
-npm install
+```cd frontend
+npm install```
 
 
 7. Запустите сервер разработки React:
 7. Run the React development server:
 
-npm start
+```npm start```
 
 
 ### Контакты / Contacts
