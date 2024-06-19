@@ -61,7 +61,7 @@ The project consists of the following main files:
 1. Клонируйте репозиторий:  
    Clone the repository:
    ```bash
-   git clone <URL репозитория>
+   git clone [<URL репозитория>]
    git clone <repository URL>
    ```
 
@@ -191,4 +191,4 @@ Main frontend file written in React. Manages routing and component rendering.
 If you have any questions or suggestions, please contact us at: victoria.grib@gmail.com
 ```
 
-Этот файл README предоставляет информацию о структуре проекта, установке, основных компонентах и примерах использования на двух языках — русском и английском. Вы можете скопировать этот текст и вставить его в файл `README.md` вашего проекта.
+
