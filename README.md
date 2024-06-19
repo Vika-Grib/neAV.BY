@@ -60,45 +60,45 @@ The project consists of the following main files:
 1. Clone the repository:
    ```bash
    git clone <URL репозитория>
-   git clone <repository URL>```
+   git clone <repository URL>
 
 2. Перейдите в директорию проекта:
 2. Navigate to the project directory:
- ```cd <название директории>
-cd <directory name>```
+cd <название директории>
+cd <directory name>
 
 3. Установите зависимости для бэкенда:
 3. Install backend dependencies:
-```
+
 pip install -r requirements.txt
-```
+
 
 4. Настройте базу данных и примените миграции:
 4. Set up the database and apply migrations:
-```
+
 python manage.py makemigrations
 python manage.py migrate
-```
+
 
 5. Запустите сервер разработки Django:
 5. Run the Django development server:
 
-```
+
 python manage.py runserver
-```
+
 
 6. Перейдите в директорию фронтенда и установите зависимости:
 6. Navigate to the frontend directory and install dependencies:
-```
+
 cd frontend
 npm install
-```
+
 
 7. Запустите сервер разработки React:
 7. Run the React development server:
-```
+
 npm start
-```
+
 
 ### Контакты / Contacts
 Если у вас есть вопросы или предложения, пожалуйста, свяжитесь с нами по email: victoria.grib@gmail.com
